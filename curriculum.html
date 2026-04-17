@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full Curriculum — Python Zero to Professional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="curriculum.css" />
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>py<span class="logo-bracket">&gt;</span>
+        <span class="logo-text">Python Zero to Pro</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#curriculum">Overview</a></li>
+        <li><a href="index.html#trainers">Trainers</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="index.html#contact" class="nav-cta">Enrol Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- CURRICULUM HERO -->
+  <div class="curr-hero">
+    <div class="container">
+      <div class="curr-hero-inner">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        <h1>Complete Curriculum</h1>
+        <p>16 modules · 8 weekends · 48 hours · Python 3.13</p>
+        <div class="curr-stats">
+          <div class="cs"><span>8</span> Weekends</div>
+          <div class="cs"><span>48</span> Hours</div>
+          <div class="cs"><span>16</span> Modules</div>
+          <div class="cs"><span>8</span> Projects</div>
+          <div class="cs"><span>100%</span> Python 3.13</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOC SIDEBAR + CONTENT -->
+  <div class="curr-layout">
+
+    <!-- Sticky sidebar TOC -->
+    <aside class="curr-toc">
+      <div class="toc-inner">
+        <div class="toc-section">
+          <div class="toc-pillar" style="--tc:#3B82F6">Foundations</div>
+          <a href="#m01" class="toc-link">M01 — Syntax &amp; Types</a>
+          <a href="#m02" class="toc-link">M02 — Control Flow</a>
+          <a href="#m03" class="toc-link">M03 — Functions</a>
+          <a href="#m04" class="toc-link">M04 — Collections</a>
+        </div>
+        <div class="toc-section">
+          <div class="toc-pillar" style="--tc:#10B981">OOP &amp; Magic</div>
+          <a href="#m05" class="toc-link">M05 — Classes</a>
+          <a href="#m06" class="toc-link">M06 — Inheritance</a>
+          <a href="#m07" class="toc-link">M07 — Dunder I</a>
+          <a href="#m08" class="toc-link">M08 — Dunder II</a>
+        </div>
+        <div class="toc-section">
+          <div class="toc-pillar" style="--tc:#F59E0B">Advanced</div>
+          <a href="#m09" class="toc-link">M09 — Decorators</a>
+          <a href="#m10" class="toc-link">M10 — Generators</a>
+          <a href="#m11" class="toc-link">M11 — Functional</a>
+          <a href="#m12" class="toc-link">M12 — Type Hints</a>
+        </div>
+        <div class="toc-section">
+          <div class="toc-pillar" style="--tc:#EF4444">Systems</div>
+          <a href="#m13" class="toc-link">M13 — File I/O</a>
+          <a href="#m14" class="toc-link">M14 — sqlite3</a>
+          <a href="#m15" class="toc-link">M15 — Threading</a>
+          <a href="#m16" class="toc-link">M16 — asyncio</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="curr-main">
+
+      <!-- PILLAR 1 -->
+      <div class="pillar-divider" style="--pc:#3B82F6">
+        <span>Pillar 1 — Foundations · Weekends 1–2 · 12 hours</span>
+      </div>
+
+      <!-- M01 -->
+      <div class="module" id="m01">
+        <div class="module-head" style="--mc:#3B82F6">
+          <div class="mh-left">
+            <span class="mh-num">M01</span>
+            <div>
+              <h2>Syntax, Data Types &amp; Operators</h2>
+              <span class="mh-meta">Weekend 1 · Saturday · 3 hours</span>
+            </div>
+          </div>
+          <span class="mh-badge" style="--mc:#3B82F6">Foundations</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Variables &amp; dynamic typing — <code>type()</code>, <code>id()</code>, <code>is</code> vs <code>==</code></span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Numeric types — <code>int</code>, <code>float</code>, <code>complex</code>, <code>Decimal</code>, <code>Fraction</code> — when to use each</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Arithmetic operators — <code>+  -  *  /  //  %  **</code> — floor division and modulo deeply</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Strings — immutability, slicing <code>[start:stop:step]</code>, negative indexing</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>String methods — <code>strip</code>, <code>split</code>, <code>join</code>, <code>replace</code>, <code>find</code>, <code>startswith</code></span></div>
+            <div class="topic-item"><span class="ti-n">06</span><span>f-strings — expressions, format specs <code>{:.2f}</code>, <code>{!r}</code>, debug <code>{var=}</code> (Python 3.8+)</span></div>
+            <div class="topic-item"><span class="ti-n">07</span><span>Boolean logic — <code>and</code>, <code>or</code>, <code>not</code>, short-circuit evaluation, truthiness rules</span></div>
+            <div class="topic-item"><span class="ti-n">08</span><span>Bitwise operators — <code>&amp;  |  ^  ~  &lt;&lt;  &gt;&gt;</code> with real use cases</span></div>
+            <div class="topic-item"><span class="ti-n">09</span><span><code>None</code> type, type coercion, <code>int("42")</code>, <code>str(3.14)</code>, explicit casting</span></div>
+            <div class="topic-item"><span class="ti-n">10</span><span>Walrus operator <code>:=</code> (assignment expressions) — Python 3.8+</span></div>
+          </div>
+          <div class="code-block">
+            <div class="cb-header"><span class="cb-dot r"></span><span class="cb-dot y"></span><span class="cb-dot g"></span><span class="cb-file">syntax_demo.py</span></div>
+            <pre><code><span class="cm"># f-string deep dive — Python 3.13</span>
+pi = <span class="num">3.14159265</span>
+<span class="fn">print</span>(<span class="st">f"Value: {pi:.3f}"</span>)          <span class="cm"># → Value: 3.142</span>
+<span class="fn">print</span>(<span class="st">f"Debug: {pi=}"</span>)            <span class="cm"># → Debug: pi=3.14159265</span>
+<span class="fn">print</span>(<span class="st">f"{'hello':>10}"</span>)            <span class="cm"># → "     hello" right-align</span>
+
+<span class="cm"># Walrus operator — assign and test in one step</span>
+<span class="kw">import</span> re
+<span class="kw">if</span> m := re.search(<span class="st">r'\d+'</span>, <span class="st">"age: 25"</span>):
+    <span class="fn">print</span>(<span class="st">f"Found number: {m.group()}"</span>)  <span class="cm"># → Found number: 25</span>
+
+<span class="cm"># Decimal for financial precision</span>
+<span class="kw">from</span> decimal <span class="kw">import</span> Decimal
+price = Decimal(<span class="st">"19.99"</span>) * Decimal(<span class="st">"3"</span>)  <span class="cm"># → 59.97 exact</span>
+
+<span class="cm"># Fraction for exact rational arithmetic</span>
+<span class="kw">from</span> fractions <span class="kw">import</span> Fraction
+<span class="fn">print</span>(Fraction(<span class="num">1</span>, <span class="num">3</span>) + Fraction(<span class="num">1</span>, <span class="num">6</span>))  <span class="cm"># → 1/2 (exact!)</span></code></pre>
+          </div>
+          <div class="project-box">
+            <div class="pb-title">Module exercise</div>
+            <div class="pb-body">Write a number formatter: given any integer, print it in decimal, binary (<code>bin()</code>), hex (<code>hex()</code>), octal (<code>oct()</code>), and as a formatted float with 4 decimal places. Display in a table using f-string alignment. Use <code>Decimal</code> to compute the sales tax on ₹1,234.56 at 18% GST — display both components exactly.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- M02 -->
+      <div class="module" id="m02">
+        <div class="module-head" style="--mc:#3B82F6">
+          <div class="mh-left">
+            <span class="mh-num">M02</span>
+            <div>
+              <h2>Control Flow, Loops &amp; Comprehensions</h2>
+              <span class="mh-meta">Weekend 1 · Sunday · 3 hours</span>
+            </div>
+          </div>
+          <span class="mh-badge" style="--mc:#3B82F6">Foundations</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span><code>if / elif / else</code> — chaining, one-liners, nested conditions</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span><code>match / case</code> — structural pattern matching, guard clauses, OR patterns (Python 3.10+)</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span><code>for</code> loop — iterate over any iterable, <code>range()</code>, lists, dicts, files</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span><code>enumerate()</code>, <code>zip()</code>, <code>zip(strict=True)</code> (3.10+) — professional iteration</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span><code>while</code> loop — condition-controlled, infinite loop + <code>break</code></span></div>
+            <div class="topic-item"><span class="ti-n">06</span><span><code>break</code>, <code>continue</code>, <code>pass</code> — and the little-known <code>for/else</code> and <code>while/else</code></span></div>
+            <div class="topic-item"><span class="ti-n">07</span><span>List comprehensions — <code>[expr for x in iterable if condition]</code></span></div>
+            <div class="topic-item"><span class="ti-n">08</span><span>Dict comprehensions — <code>{k: v for k, v in pairs}</code></span></div>
+            <div class="topic-item"><span class="ti-n">09</span><span>Set comprehensions and generator expressions (lazy)</span></div>
+            <div class="topic-item"><span class="ti-n">10</span><span>Nested comprehensions — and when they become unreadable (the rule)</span></div>
+          </div>
+          <div class="code-block">
+            <div class="cb-header"><span class="cb-dot r"></span><span class="cb-dot y"></span><span class="cb-dot g"></span><span class="cb-file">control_flow.py</span></div>
+            <pre><code><span class="cm"># match/case structural pattern matching — Python 3.10+</span>
+<span class="kw">def</span> <span class="fn">classify_response</span>(response):
+    <span class="kw">match</span> response:
+        <span class="kw">case</span> {<span class="st">"status"</span>: <span class="num">200</span>, <span class="st">"data"</span>: data}:
+            <span class="kw">return</span> <span class="st">f"Success: {data}"</span>
+        <span class="kw">case</span> {<span class="st">"status"</span>: <span class="num">404</span>}:
+            <span class="kw">return</span> <span class="st">"Not found"</span>
+        <span class="kw">case</span> {<span class="st">"status"</span>: code} <span class="kw">if</span> code >= <span class="num">500</span>:  <span class="cm"># guard clause</span>
+            <span class="kw">return</span> <span class="st">f"Server error: {code}"</span>
+        <span class="kw">case</span> _:
+            <span class="kw">return</span> <span class="st">"Unknown"</span>
+
+<span class="cm"># for/else — the else block runs only if no break occurred</span>
+<span class="kw">def</span> <span class="fn">find_prime</span>(candidates):
+    <span class="kw">for</span> n <span class="kw">in</span> candidates:
+        <span class="kw">if</span> is_prime(n):
+            <span class="fn">print</span>(<span class="st">f"Found: {n}"</span>)
+            <span class="kw">break</span>
+    <span class="kw">else</span>:
+        <span class="fn">print</span>(<span class="st">"No primes in list"</span>)  <span class="cm"># runs if no break</span>
+
+<span class="cm"># zip(strict=True) — raises if lengths differ (3.10+)</span>
+names = [<span class="st">"Alice"</span>, <span class="st">"Bob"</span>]
+scores = [<span class="num">95</span>, <span class="num">87</span>]
+pairs = dict(zip(names, scores, strict=<span class="kw">True</span>))</code></pre>
+          </div>
+          <div class="project-box">
+            <div class="pb-title">Module exercise</div>
+            <div class="pb-body">FizzBuzz extended using <code>match/case</code>: print 1–100 with Fizz (÷3), Buzz (÷5), FizzBuzz (÷15), Prime (is prime using a function), Square (perfect square), or just the number. Use <code>for/else</code> to detect if no primes exist in a given range. Build the prime checker using the <code>for/else</code> pattern itself.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- M03 -->
+      <div class="module" id="m03">
+        <div class="module-head" style="--mc:#3B82F6">
+          <div class="mh-left">
+            <span class="mh-num">M03</span>
+            <div>
+              <h2>Functions — Arguments, Closures, Scope</h2>
+              <span class="mh-meta">Weekend 2 · Saturday · 3 hours</span>
+            </div>
+          </div>
+          <span class="mh-badge" style="--mc:#3B82F6">Foundations</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span><code>def</code>, <code>return</code>, docstrings (Google style), <code>help()</code></span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Positional, keyword, default arguments — the mutable default trap (<code>def f(x, lst=[])</code>)</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span><code>*args</code> — collect extra positional arguments into a tuple</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span><code>**kwargs</code> — collect extra keyword arguments into a dict</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Keyword-only arguments (after <code>*</code>), positional-only (before <code>/</code>) — Python 3.8+</span></div>
+            <div class="topic-item"><span class="ti-n">06</span><span>LEGB scope rule — Local → Enclosing → Global → Built-in</span></div>
+            <div class="topic-item"><span class="ti-n">07</span><span><code>global</code> and <code>nonlocal</code> keywords — when and why</span></div>
+            <div class="topic-item"><span class="ti-n">08</span><span>Closures — inner function captures outer variable, factory pattern</span></div>
+            <div class="topic-item"><span class="ti-n">09</span><span><code>lambda</code> — anonymous one-expression functions, sort key usage</span></div>
+            <div class="topic-item"><span class="ti-n">10</span><span>Functions as first-class objects — pass, return, store in variables</span></div>
+          </div>
+          <div class="code-block">
+            <div class="cb-header"><span class="cb-dot r"></span><span class="cb-dot y"></span><span class="cb-dot g"></span><span class="cb-file">functions.py</span></div>
+            <pre><code><span class="cm"># Positional-only (/) and keyword-only (*) — Python 3.8+</span>
+<span class="kw">def</span> <span class="fn">format_name</span>(first, last, /, *, separator=<span class="st">" "</span>, upper=<span class="kw">False</span>):
+    <span class="st">"""first and last are positional-only (before /).
+    separator, upper are keyword-only (after *).
+    """</span>
+    result = <span class="st">f"{first}{separator}{last}"</span>
+    <span class="kw">return</span> result.upper() <span class="kw">if</span> upper <span class="kw">else</span> result
+
+<span class="fn">format_name</span>(<span class="st">"Ravi"</span>, <span class="st">"Kumar"</span>)                       <span class="cm"># OK</span>
+<span class="fn">format_name</span>(<span class="st">"Ravi"</span>, <span class="st">"Kumar"</span>, separator=<span class="st">"_"</span>)        <span class="cm"># OK</span>
+<span class="cm"># format_name(first="Ravi", last="Kumar")          # TypeError!</span>
+
+<span class="cm"># Closure — function that remembers its creation context</span>
+<span class="kw">def</span> <span class="fn">make_counter</span>(start=<span class="num">0</span>, step=<span class="num">1</span>):
+    count = start
+    <span class="kw">def</span> <span class="fn">counter</span>():
+        <span class="kw">nonlocal</span> count   <span class="cm"># modify the enclosing scope</span>
+        val = count
+        count += step
+        <span class="kw">return</span> val
+    <span class="kw">return</span> counter
+
+c = make_counter(start=<span class="num">10</span>, step=<span class="num">5</span>)
+<span class="fn">print</span>(c(), c(), c())  <span class="cm"># → 10 15 20</span></code></pre>
+          </div>
+          <div class="project-box">
+            <div class="pb-title">Module exercise</div>
+            <div class="pb-body">Build a configurable logger using closures: <code>make_logger(prefix, level="INFO")</code> returns a <code>log(message, **context)</code> function that prints <code>[LEVEL] prefix: message key=value ...</code>. Demonstrate all argument forms. Create a <code>tee(*loggers)</code> function that calls multiple loggers. Show that the mutable-default trap breaks a naïve implementation.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- M04 -->
+      <div class="module" id="m04">
+        <div class="module-head" style="--mc:#3B82F6">
+          <div class="mh-left">
+            <span class="mh-num">M04</span>
+            <div>
+              <h2>Collections — Built-in &amp; the collections Module</h2>
+              <span class="mh-meta">Weekend 2 · Sunday · 3 hours</span>
+            </div>
+          </div>
+          <span class="mh-badge" style="--mc:#3B82F6">Foundations</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span><code>list</code> — mutable ordered sequence, all methods, <code>sort</code> vs <code>sorted</code>, O(n) insert</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span><code>tuple</code> — immutable, packing/unpacking, swap trick, named returns</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span><code>dict</code> — hash map, <code>.items()</code> <code>.keys()</code> <code>.values()</code>, merge with <code>|</code> (3.9+)</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span><code>set</code> and <code>frozenset</code> — union, intersection, difference, symmetric difference</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span><code>collections.deque</code> — O(1) append/pop from both ends, max length, rotate</span></div>
+            <div class="topic-item"><span class="ti-n">06</span><span><code>collections.Counter</code> — frequency counting, <code>most_common()</code>, arithmetic</span></div>
+            <div class="topic-item"><span class="ti-n">07</span><span><code>collections.defaultdict</code> — default factory, group-by pattern</span></div>
+            <div class="topic-item"><span class="ti-n">08</span><span><code>collections.namedtuple</code> and <code>typing.NamedTuple</code> — structured lightweight data</span></div>
+            <div class="topic-item"><span class="ti-n">09</span><span><code>collections.OrderedDict</code> and <code>collections.ChainMap</code></span></div>
+            <div class="topic-item"><span class="ti-n">10</span><span>Choosing the right collection — time and space complexity trade-offs table</span></div>
+          </div>
+          <div class="project-box">
+            <div class="pb-title">Weekend 2 project</div>
+            <div class="pb-body">Text analysis toolkit: given any text file, compute word frequency (<code>Counter</code>), character frequency, find the top-10 bigrams (consecutive word pairs), group words by length using <code>defaultdict</code>, find all anagram groups, and identify the longest word chain where each word starts with the last letter of the previous. Display results as formatted tables using f-string alignment.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PILLAR 2 -->
+      <div class="pillar-divider" style="--pc:#10B981">
+        <span>Pillar 2 — OOP &amp; Magic Methods · Weekends 3–4 · 12 hours</span>
+      </div>
+
+      <!-- M05-M08 abbreviated for space - pattern established above -->
+      <div class="module" id="m05">
+        <div class="module-head" style="--mc:#10B981">
+          <div class="mh-left"><span class="mh-num">M05</span>
+            <div><h2>Classes, Instances &amp; Methods</h2><span class="mh-meta">Weekend 3 · Saturday · 3 hours</span></div>
+          </div><span class="mh-badge" style="--mc:#10B981">OOP</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Class definition, instantiation, <code>self</code> — what <code>self</code> actually is at the bytecode level</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span><code>__init__</code> — constructor, setting instance attributes, validation in init</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Instance methods vs <code>@classmethod</code> vs <code>@staticmethod</code> — when to use each</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Class attributes vs instance attributes — shared data vs per-instance data</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span><code>@property</code>, <code>@setter</code>, <code>@deleter</code> — computed and validated attributes</span></div>
+            <div class="topic-item"><span class="ti-n">06</span><span>Encapsulation — <code>_single</code> (convention) and <code>__double</code> (name mangling)</span></div>
+            <div class="topic-item"><span class="ti-n">07</span><span><code>__slots__</code> — restrict attributes, reduce memory for large object counts</span></div>
+            <div class="topic-item"><span class="ti-n">08</span><span>Class introspection — <code>__dict__</code>, <code>vars()</code>, <code>dir()</code>, <code>isinstance()</code>, <code>issubclass()</code></span></div>
+            <div class="topic-item"><span class="ti-n">09</span><span>Alternate constructors using <code>@classmethod</code> — factory pattern</span></div>
+            <div class="topic-item"><span class="ti-n">10</span><span>Mutable default pitfalls in <code>__init__</code> — always use <code>None</code>, then assign</span></div>
+          </div>
+          <div class="code-block">
+            <div class="cb-header"><span class="cb-dot r"></span><span class="cb-dot y"></span><span class="cb-dot g"></span><span class="cb-file">bank_account.py</span></div>
+            <pre><code><span class="kw">class</span> <span class="cl">BankAccount</span>:
+    interest_rate = <span class="num">0.05</span>          <span class="cm"># class attribute — shared</span>
+
+    <span class="kw">def</span> <span class="fn">__init__</span>(self, owner: str, balance: float = <span class="num">0</span>) -> <span class="kw">None</span>:
+        self.owner = owner
+        self.__balance = balance   <span class="cm"># name-mangled → _BankAccount__balance</span>
+
+    @property
+    <span class="kw">def</span> <span class="fn">balance</span>(self) -> float:
+        <span class="kw">return</span> self.__balance
+
+    @balance.setter
+    <span class="kw">def</span> <span class="fn">balance</span>(self, value: float) -> <span class="kw">None</span>:
+        <span class="kw">if</span> value < <span class="num">0</span>:
+            <span class="kw">raise</span> ValueError(<span class="st">f"Balance cannot be negative: {value}"</span>)
+        self.__balance = value
+
+    @classmethod
+    <span class="kw">def</span> <span class="fn">from_dict</span>(cls, data: dict) -> <span class="st">"BankAccount"</span>:
+        <span class="kw">return</span> cls(data[<span class="st">"owner"</span>], data.get(<span class="st">"balance"</span>, <span class="num">0</span>))
+
+    @staticmethod
+    <span class="kw">def</span> <span class="fn">is_valid_owner</span>(name: str) -> bool:
+        <span class="kw">return</span> bool(name) <span class="kw">and</span> name.isalpha()</code></pre>
+          </div>
+          <div class="project-box"><div class="pb-title">Module exercise</div><div class="pb-body">Design a <code>Student</code> class: <code>@property</code> for GPA (computed from grades list), <code>@classmethod from_csv()</code> alternate constructor, <code>@staticmethod letter_grade(gpa)</code>, and <code>__slots__</code>. Add 10,000 students, measure memory usage with vs without <code>__slots__</code> using <code>tracemalloc</code>.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="m06">
+        <div class="module-head" style="--mc:#10B981">
+          <div class="mh-left"><span class="mh-num">M06</span><div><h2>Inheritance, MRO, ABC &amp; Mixins</h2><span class="mh-meta">Weekend 3 · Sunday · 3 hours</span></div></div>
+          <span class="mh-badge" style="--mc:#10B981">OOP</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Single inheritance — child extends parent, method override</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span><code>super()</code> — call parent's implementation, cooperative multiple inheritance</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Multiple inheritance — Python resolves with C3 linearisation (MRO)</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span><code>__mro__</code> and <code>ClassName.mro()</code> — read the resolution order for any class</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span><code>abc.ABC</code> and <code>@abstractmethod</code> — force subclasses to implement methods</span></div>
+            <div class="topic-item"><span class="ti-n">06</span><span><code>typing.Protocol</code> — structural subtyping, duck typing with type safety</span></div>
+            <div class="topic-item"><span class="ti-n">07</span><span>Mixins — add reusable behaviour without full inheritance hierarchy</span></div>
+            <div class="topic-item"><span class="ti-n">08</span><span>Composition vs inheritance — prefer composition (the golden rule)</span></div>
+            <div class="topic-item"><span class="ti-n">09</span><span>Polymorphism — same interface, different behaviour</span></div>
+            <div class="topic-item"><span class="ti-n">10</span><span><code>__init_subclass__</code> — hook called when a class is subclassed</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Weekend 3 project</div><div class="pb-body">Build a shapes library: abstract <code>Shape</code> base, concrete <code>Circle</code>/<code>Rectangle</code>/<code>Triangle</code>/<code>Polygon</code>. Add a <code>JSONMixin</code> and a <code>ReprMixin</code>. Implement a <code>ShapeCollection</code> supporting area-based sorting, type filtering, and serialisation. Demonstrate the diamond problem with an explicit MRO trace.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="m07">
+        <div class="module-head" style="--mc:#10B981">
+          <div class="mh-left"><span class="mh-num">M07</span><div><h2>Dunder Methods — Representation &amp; Comparison</h2><span class="mh-meta">Weekend 4 · Saturday · 3 hours</span></div></div>
+          <span class="mh-badge" style="--mc:#10B981">Magic</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span><code>__repr__</code> — unambiguous developer string, <code>eval(repr(obj)) == obj</code> goal</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span><code>__str__</code> — human-readable, what <code>print()</code> and <code>str()</code> call</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span><code>__format__</code> — custom format spec, what f-strings call with <code>{obj:spec}</code></span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span><code>__eq__</code> and <code>__ne__</code> — define <code>==</code> and <code>!=</code></span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span><code>__lt__</code>, <code>__le__</code>, <code>__gt__</code>, <code>__ge__</code> — or use <code>@total_ordering</code></span></div>
+            <div class="topic-item"><span class="ti-n">06</span><span><code>__hash__</code> — when you define <code>__eq__</code> you must define <code>__hash__</code> (or set to None)</span></div>
+            <div class="topic-item"><span class="ti-n">07</span><span><code>__bool__</code> — define truthiness for <code>if obj:</code></span></div>
+            <div class="topic-item"><span class="ti-n">08</span><span><code>__len__</code> — define <code>len(obj)</code>, also affects truthiness</span></div>
+            <div class="topic-item"><span class="ti-n">09</span><span><code>__int__</code>, <code>__float__</code>, <code>__complex__</code>, <code>__bytes__</code> — numeric conversion protocols</span></div>
+            <div class="topic-item"><span class="ti-n">10</span><span><code>functools.total_ordering</code> — define two methods, get all six comparisons</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Module exercise</div><div class="pb-body">Build a <code>Money(amount, currency)</code> class with full comparison dunders, <code>__hash__</code> so it works in sets and dicts, <code>__format__</code> for ₹/$/€ symbols, and <code>__bool__</code>. Verify <code>sorted()</code> works, that <code>Money</code> objects are valid dict keys, and that two <code>Money</code> sets can be combined with <code>|</code>.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="m08">
+        <div class="module-head" style="--mc:#10B981">
+          <div class="mh-left"><span class="mh-num">M08</span><div><h2>Dunder Methods — Operators, Containers &amp; Context Managers</h2><span class="mh-meta">Weekend 4 · Sunday · 3 hours</span></div></div>
+          <span class="mh-badge" style="--mc:#10B981">Magic</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Arithmetic dunders — <code>__add__</code>, <code>__sub__</code>, <code>__mul__</code>, <code>__truediv__</code>, <code>__floordiv__</code>, <code>__mod__</code>, <code>__pow__</code></span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Reflected dunders — <code>__radd__</code>, <code>__rsub__</code> — called when left operand doesn't support op</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>In-place dunders — <code>__iadd__</code>, <code>__imul__</code> — for <code>+=</code> and <code>*=</code></span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span><code>__getitem__</code>, <code>__setitem__</code>, <code>__delitem__</code> — make objects subscriptable (<code>obj[key]</code>)</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span><code>__contains__</code> — define the <code>in</code> operator</span></div>
+            <div class="topic-item"><span class="ti-n">06</span><span><code>__missing__</code> — called by dict subclass when key not found</span></div>
+            <div class="topic-item"><span class="ti-n">07</span><span><code>__iter__</code> and <code>__next__</code> — make objects iterable with <code>for x in obj:</code></span></div>
+            <div class="topic-item"><span class="ti-n">08</span><span><code>__enter__</code> and <code>__exit__</code> — context manager protocol, <code>with</code> statement</span></div>
+            <div class="topic-item"><span class="ti-n">09</span><span><code>__call__</code> — make instances callable, <code>obj()</code> dispatches to <code>__call__</code></span></div>
+            <div class="topic-item"><span class="ti-n">10</span><span><code>contextlib.contextmanager</code> — generator-based context managers with <code>@</code></span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Weekend 4 project</div><div class="pb-body">Build a custom <code>Matrix</code> class: <code>__add__</code>, <code>__mul__</code> (matrix multiply), <code>__getitem__</code> for row and cell access (<code>mat[i][j]</code>), <code>__iter__</code> (yields rows), <code>__repr__</code>, <code>__eq__</code>, <code>__len__</code>. Add a context manager that times the operation and logs the shape. Then build a <code>SparseMatrix</code> (dict subclass) with <code>__missing__</code> returning 0 for unset cells.</div></div>
+        </div>
+      </div>
+
+      <!-- PILLAR 3 -->
+      <div class="pillar-divider" style="--pc:#F59E0B">
+        <span>Pillar 3 — Advanced Python · Weekends 5–6 · 12 hours</span>
+      </div>
+
+      <div class="module" id="m09">
+        <div class="module-head" style="--mc:#F59E0B">
+          <div class="mh-left"><span class="mh-num">M09</span><div><h2>Decorators — Function, Class &amp; Parametrised</h2><span class="mh-meta">Weekend 5 · Saturday · 3 hours</span></div></div>
+          <span class="mh-badge" style="--mc:#F59E0B">Advanced</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Functions as objects — pass to functions, return from functions, store in variables</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>What a decorator is — syntactic sugar for <code>func = decorator(func)</code></span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Simple decorator — timing any function's execution</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span><code>@functools.wraps</code> — preserve <code>__name__</code>, <code>__doc__</code>, <code>__wrapped__</code> through decoration</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Parametrised decorators — <code>@retry(times=3)</code> — a function that returns a decorator</span></div>
+            <div class="topic-item"><span class="ti-n">06</span><span>Class-based decorators — <code>__init__</code> receives function, <code>__call__</code> wraps it</span></div>
+            <div class="topic-item"><span class="ti-n">07</span><span>Stacking decorators — <code>@A @B def f()</code> — order matters, inner applied first</span></div>
+            <div class="topic-item"><span class="ti-n">08</span><span><code>@functools.lru_cache</code> and <code>@functools.cache</code> — memoisation in one line</span></div>
+            <div class="topic-item"><span class="ti-n">09</span><span><code>@functools.singledispatch</code> — different implementation per argument type</span></div>
+            <div class="topic-item"><span class="ti-n">10</span><span>Real examples — <code>@dataclass</code>, <code>@property</code>, <code>@staticmethod</code> are all decorators</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Module exercise</div><div class="pb-body">Build a decorator library: <code>@timer</code>, <code>@retry(n, exceptions)</code>, <code>@validate(schema_dict)</code> (checks kwarg types), <code>@deprecated("use X instead")</code> (warns + still calls), <code>@memoize</code> (manual LRU cache). Demonstrate stacking all five on one function and show the correct output from <code>help()</code> still works.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="m10">
+        <div class="module-head" style="--mc:#F59E0B">
+          <div class="mh-left"><span class="mh-num">M10</span><div><h2>Generators, Iterators &amp; itertools</h2><span class="mh-meta">Weekend 5 · Sunday · 3 hours</span></div></div>
+          <span class="mh-badge" style="--mc:#F59E0B">Advanced</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Generator functions — <code>def</code> with <code>yield</code>, lazy evaluation, one value at a time</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Generator expressions — <code>(x**2 for x in range(10))</code> — lazy list comprehension</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span><code>next()</code> and <code>StopIteration</code> — the iterator protocol under the hood</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span><code>yield from</code> — delegate to sub-generator, compose generators</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span><code>send()</code> and <code>throw()</code> — two-way communication with a generator</span></div>
+            <div class="topic-item"><span class="ti-n">06</span><span>Infinite generators — <code>count()</code>, <code>cycle()</code>, <code>repeat()</code> from itertools</span></div>
+            <div class="topic-item"><span class="ti-n">07</span><span>itertools — <code>chain</code>, <code>islice</code>, <code>takewhile</code>, <code>dropwhile</code>, <code>groupby</code>, <code>product</code>, <code>permutations</code>, <code>combinations</code></span></div>
+            <div class="topic-item"><span class="ti-n">08</span><span>Memory efficiency — generator vs list, <code>tracemalloc</code> proof</span></div>
+            <div class="topic-item"><span class="ti-n">09</span><span>Custom iterator class — <code>__iter__</code> + <code>__next__</code> vs generator function</span></div>
+            <div class="topic-item"><span class="ti-n">10</span><span>Coroutine foundations — <code>yield</code> used to receive values, precursor to <code>async/await</code></span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Weekend 5 project</div><div class="pb-body">Build a lazy data pipeline: <code>read_csv_lazy()</code> → <code>filter_rows(predicate)</code> → <code>transform_columns(mapping)</code> → <code>batch(n)</code> → <code>write_output()</code>. Chain them so a 500MB file processes one row at a time with constant memory. Use <code>itertools.groupby</code> to aggregate. Measure memory with <code>tracemalloc</code> vs loading the full file.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="m11">
+        <div class="module-head" style="--mc:#F59E0B">
+          <div class="mh-left"><span class="mh-num">M11</span><div><h2>Functional Python &amp; functools</h2><span class="mh-meta">Weekend 6 · Saturday · 3 hours</span></div></div>
+          <span class="mh-badge" style="--mc:#F59E0B">Advanced</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Pure functions — same inputs → same output, no side effects</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span><code>map()</code> — apply function to every element, returns iterator</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span><code>filter()</code> — keep elements where function returns True</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span><code>functools.reduce()</code> — fold a list into a single value</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span><code>functools.partial()</code> — pre-fill some arguments of a function</span></div>
+            <div class="topic-item"><span class="ti-n">06</span><span><code>operator</code> module — <code>operator.add</code>, <code>itemgetter</code>, <code>attrgetter</code>, <code>methodcaller</code></span></div>
+            <div class="topic-item"><span class="ti-n">07</span><span>Higher-order functions — functions that take or return other functions</span></div>
+            <div class="topic-item"><span class="ti-n">08</span><span>Function composition — combine two functions into one (pipe pattern)</span></div>
+            <div class="topic-item"><span class="ti-n">09</span><span>Immutable data patterns — why mutation causes bugs</span></div>
+            <div class="topic-item"><span class="ti-n">10</span><span><code>functools.cached_property</code> — compute once, cache on the instance</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Module exercise</div><div class="pb-body">Build a transaction processor using only functional tools — no <code>for</code> loops. Use <code>map</code>/<code>filter</code>/<code>reduce</code> + <code>operator.itemgetter</code> to compute total spend by category, top spender per category, and flag transactions where the same card appears more than 3 times in 60 seconds. Then refactor to a loop-based version and compare readability.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="m12">
+        <div class="module-head" style="--mc:#F59E0B">
+          <div class="mh-left"><span class="mh-num">M12</span><div><h2>Type Hints, Dataclasses &amp; Python 3.13 Typing</h2><span class="mh-meta">Weekend 6 · Sunday · 3 hours</span></div></div>
+          <span class="mh-badge" style="--mc:#F59E0B">Advanced</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Type hints basics — <code>def f(x: int) -> str</code>, runtime ignored, tools use it</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Built-in generics — <code>list[int]</code>, <code>dict[str, int]</code>, <code>tuple[int, ...]</code> (Python 3.9+)</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span><code>Optional[T]</code> = <code>T | None</code> — Python 3.10+ union syntax <code>X | Y</code></span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>PEP 695 — <code>type X = int | str</code> type alias statement (Python 3.12+)</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span><code>TypeVar</code> and <code>Generic[T]</code> — write type-safe generic containers</span></div>
+            <div class="topic-item"><span class="ti-n">06</span><span><code>typing.Protocol</code> — structural subtyping without inheritance</span></div>
+            <div class="topic-item"><span class="ti-n">07</span><span><code>@dataclass</code> — auto-generates <code>__init__</code>, <code>__repr__</code>, <code>__eq__</code></span></div>
+            <div class="topic-item"><span class="ti-n">08</span><span><code>@dataclass(frozen=True)</code> — immutable, hashable by default</span></div>
+            <div class="topic-item"><span class="ti-n">09</span><span><code>field()</code>, <code>__post_init__()</code>, <code>ClassVar</code>, <code>InitVar</code> — advanced dataclass</span></div>
+            <div class="topic-item"><span class="ti-n">10</span><span><code>mypy</code> and <code>pyright</code> — run the type checker, understand and fix errors</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Weekend 6 project</div><div class="pb-body">Refactor the shapes library from Weekend 3 to use <code>@dataclass(frozen=True, slots=True)</code>, PEP 695 type aliases, full type annotations, and a <code>TypeVar</code>-based <code>Generic[T]</code> container wrapping any <code>Drawable</code>. Run <code>mypy --strict</code> and fix every error. Zero mypy errors is the exit criterion for this weekend.</div></div>
+        </div>
+      </div>
+
+      <!-- PILLAR 4 -->
+      <div class="pillar-divider" style="--pc:#EF4444">
+        <span>Pillar 4 — Systems &amp; Concurrency · Weekends 7–8 · 12 hours</span>
+      </div>
+
+      <div class="module" id="m13">
+        <div class="module-head" style="--mc:#EF4444">
+          <div class="mh-left"><span class="mh-num">M13</span><div><h2>File I/O, pathlib, JSON, CSV &amp; Exceptions</h2><span class="mh-meta">Weekend 7 · Saturday · 3 hours</span></div></div>
+          <span class="mh-badge" style="--mc:#EF4444">Systems</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span><code>open()</code> modes — <code>r</code>, <code>w</code>, <code>a</code>, <code>rb</code>, <code>wb</code> — text vs binary, encoding parameter</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span><code>with open() as f:</code> — context manager guarantees file closure even on exception</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span><code>pathlib.Path</code> — cross-platform, <code>/</code> operator, <code>.read_text()</code>, <code>.glob()</code>, <code>.rglob()</code></span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span><code>json.dumps</code> / <code>json.loads</code> / <code>json.dump</code> / <code>json.load</code> — custom encoders</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span><code>csv.reader</code>, <code>csv.writer</code>, <code>csv.DictReader</code>, <code>csv.DictWriter</code></span></div>
+            <div class="topic-item"><span class="ti-n">06</span><span>Exception hierarchy — <code>BaseException</code> → <code>Exception</code> → specific types</span></div>
+            <div class="topic-item"><span class="ti-n">07</span><span><code>try / except / else / finally</code> — all four clauses and when each runs</span></div>
+            <div class="topic-item"><span class="ti-n">08</span><span><code>raise</code>, <code>raise X from Y</code> (exception chaining), <code>contextlib.suppress()</code></span></div>
+            <div class="topic-item"><span class="ti-n">09</span><span>Custom exception classes — inherit from <code>Exception</code>, add attributes</span></div>
+            <div class="topic-item"><span class="ti-n">10</span><span><code>ExceptionGroup</code> and <code>except*</code> syntax — Python 3.11+ for concurrent errors</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Module exercise</div><div class="pb-body">Build a config manager using <code>pathlib</code>: reads JSON and CSV configs, validates required keys (raises custom <code>ConfigError</code> with field names), supports environment variable overrides with type coercion, writes a processed output file, and handles every failure mode with a specific exception type. Use exception chaining (<code>raise X from Y</code>) throughout.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="m14">
+        <div class="module-head" style="--mc:#EF4444">
+          <div class="mh-left"><span class="mh-num">M14</span><div><h2>Database Programming — sqlite3</h2><span class="mh-meta">Weekend 7 · Sunday · 3 hours</span></div></div>
+          <span class="mh-badge" style="--mc:#EF4444">Systems</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span><code>sqlite3.connect()</code> — in-memory (<code>:memory:</code>) vs file-based database</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span><code>cursor.execute()</code> — DDL (<code>CREATE TABLE</code>) and DML (<code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, <code>SELECT</code>)</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Parameterised queries — <code>?</code> placeholders — <em>never</em> use f-strings (SQL injection)</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span><code>fetchone()</code>, <code>fetchmany()</code>, <code>fetchall()</code> — and cursor as an iterator</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span><code>conn.row_factory = sqlite3.Row</code> — access columns by name, not index</span></div>
+            <div class="topic-item"><span class="ti-n">06</span><span>Transactions — <code>conn.commit()</code> and <code>conn.rollback()</code>, ACID guarantees</span></div>
+            <div class="topic-item"><span class="ti-n">07</span><span><code>with conn:</code> context manager — auto-commits on success, rollbacks on exception</span></div>
+            <div class="topic-item"><span class="ti-n">08</span><span><code>executemany()</code> — bulk insert efficiently</span></div>
+            <div class="topic-item"><span class="ti-n">09</span><span>Indexes, foreign keys (<code>PRAGMA foreign_keys = ON</code>)</span></div>
+            <div class="topic-item"><span class="ti-n">10</span><span>Simple ORM layer — Python <code>@dataclass</code> ↔ database row mapping</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Weekend 7 project</div><div class="pb-body">Library Management System: sqlite3 database with <code>books</code>, <code>members</code>, and <code>loans</code> tables. Full CRUD via Python classes. Foreign key constraints. Search by title/author. Overdue detection using <code>datetime</code> comparison. Export to JSON using <code>pathlib</code>. Every edge case handled with specific exceptions. No third-party ORM — pure sqlite3.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="m15">
+        <div class="module-head" style="--mc:#EF4444">
+          <div class="mh-left"><span class="mh-num">M15</span><div><h2>Multithreading, GIL &amp; Multiprocessing</h2><span class="mh-meta">Weekend 8 · Saturday · 3 hours</span></div></div>
+          <span class="mh-badge" style="--mc:#EF4444">Systems</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>The Global Interpreter Lock (GIL) — one thread runs Python at a time, why it exists</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>I/O-bound vs CPU-bound — threads help I/O, multiprocessing helps CPU</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span><code>threading.Thread</code> — <code>start()</code>, <code>join()</code>, daemon threads, <code>target</code> + <code>args</code></span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Race conditions — why shared mutable state is dangerous (live demo)</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span><code>threading.Lock</code> and <code>threading.RLock</code> — mutual exclusion with <code>with lock:</code></span></div>
+            <div class="topic-item"><span class="ti-n">06</span><span><code>threading.Event</code> — signal between threads, <code>wait()</code>, <code>set()</code>, <code>clear()</code></span></div>
+            <div class="topic-item"><span class="ti-n">07</span><span><code>threading.Semaphore</code> — limit concurrent access to N threads</span></div>
+            <div class="topic-item"><span class="ti-n">08</span><span><code>queue.Queue</code> — thread-safe data exchange, producer/consumer pattern</span></div>
+            <div class="topic-item"><span class="ti-n">09</span><span><code>concurrent.futures.ThreadPoolExecutor</code> and <code>ProcessPoolExecutor</code></span></div>
+            <div class="topic-item"><span class="ti-n">10</span><span>Python 3.13 free-threaded mode (<code>--disable-gil</code>, experimental) — what it means for future Python</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Module exercise</div><div class="pb-body">Concurrent file processor: <code>ThreadPoolExecutor</code> processes 50 files simultaneously. <code>Lock</code> protects a shared progress counter. <code>Event</code> signals all threads to abort on the first critical error. <code>Semaphore</code> limits concurrent file handles to 10. Measure wall-clock time vs sequential processing — demonstrate the I/O-bound speedup.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="m16">
+        <div class="module-head" style="--mc:#EF4444">
+          <div class="mh-left"><span class="mh-num">M16</span><div><h2>asyncio, async/await &amp; unittest</h2><span class="mh-meta">Weekend 8 · Sunday · 3 hours</span></div></div>
+          <span class="mh-badge" style="--mc:#EF4444">Systems</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>The event loop — single-threaded concurrency, tasks take turns at <code>await</code> points</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span><code>async def</code> — defines a coroutine function, returns a coroutine object</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span><code>await</code> — suspend current coroutine until awaitable completes</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span><code>asyncio.run()</code> — entry point, creates event loop, runs coroutine, closes loop</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span><code>asyncio.create_task()</code> — schedule coroutine to run concurrently</span></div>
+            <div class="topic-item"><span class="ti-n">06</span><span><code>asyncio.gather()</code> — run multiple coroutines concurrently, collect results</span></div>
+            <div class="topic-item"><span class="ti-n">07</span><span><code>asyncio.TaskGroup</code> (3.11+) — structured concurrency, all tasks cancelled on error</span></div>
+            <div class="topic-item"><span class="ti-n">08</span><span><code>asyncio.timeout</code> (3.11+) — cancel coroutine if it takes too long</span></div>
+            <div class="topic-item"><span class="ti-n">09</span><span><code>async with</code> and <code>async for</code> — asynchronous context managers and iterators</span></div>
+            <div class="topic-item"><span class="ti-n">10</span><span><code>unittest</code> — <code>TestCase</code>, <code>setUp</code>/<code>tearDown</code>, <code>assertEqual</code>, <code>assertRaises</code>, <code>mock.patch</code></span></div>
+          </div>
+          <div class="project-box">
+            <div class="pb-title">Weekend 8 final project</div>
+            <div class="pb-body">Async task runner — the capstone that integrates everything from all 8 weekends: reads tasks from a <code>sqlite3</code> database, executes them concurrently with <code>asyncio.TaskGroup</code> and per-task <code>asyncio.timeout</code>, updates status in the DB (protected by <code>threading.Lock</code>), writes results to JSON files via <code>pathlib</code>, logs failures with custom exception types and exception chaining, and has a full <code>unittest</code> suite with <code>mock.patch</code> for the DB layer. This is a complete Python 3.13 programme using every topic from the course.</div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ENROL CTA -->
+  <section class="curr-cta">
+    <div class="container">
+      <div class="cta-block">
+        <div class="cta-left">
+          <div class="cta-live"><span class="live-dot"></span>Cohort 01 · 20 April 2026</div>
+          <h2 class="cta-title">Ready to start?</h2>
+          <p class="cta-sub">16 modules, 8 weekends, complete Python 3.13 mastery.</p>
+        </div>
+        <div class="cta-contacts">
+          <div class="contact-card">
+            <div class="cc-avatar" style="background:linear-gradient(135deg,#1E40AF,#3B82F6)">SM</div>
+            <div><div class="cc-name">Sanjay Mahto</div><a href="tel:+917795457284" class="cc-phone">+91 77954 57284</a></div>
+          </div>
+          <div class="contact-card">
+            <div class="cc-avatar" style="background:linear-gradient(135deg,#0F766E,#14B8A6)">PK</div>
+            <div><div class="cc-name">Praveen Kumar</div><a href="tel:+916261501868" class="cc-phone">+91 62615 01868</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-bracket">&lt;</span>py<span class="logo-bracket">&gt;</span> Python Zero to Professional</div>
+        <div class="footer-links"><a href="index.html">Home</a><a href="curriculum.html">Curriculum</a><a href="index.html#pricing">Pricing</a></div>
+        <div class="footer-copy">© 2026 · Sanjay Mahto &amp; Praveen Kumar</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

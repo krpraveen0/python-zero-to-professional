@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python Zero to Professional — AI Engineering Bridge Course</title>
+  <meta name="description" content="Complete Python 3.13 mastery: OOP, dunder methods, collections, threading, asyncio, sqlite3 — taught by Sanjay Mahto & Praveen Kumar. 8 weekends, 48 hours, zero to professional." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>py<span class="logo-bracket">&gt;</span>
+        <span class="logo-text">Python Zero to Pro</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#curriculum">Curriculum</a></li>
+        <li><a href="#modules">Modules</a></li>
+        <li><a href="#trainers">Trainers</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="curriculum.html" class="nav-cta">Full Curriculum</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="code-rain" id="codeRain"></div>
+      <div class="hero-gradient"></div>
+    </div>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Cohort 01 · Starting 20 April 2026
+        </div>
+        <h1 class="hero-title">
+          Python<br/>
+          <span class="title-accent">Zero</span> to<br/>
+          <span class="title-outline">Professional</span>
+        </h1>
+        <p class="hero-sub">
+          Complete Python 3.13 mastery — OOP, dunder methods, collections,
+          decorators, generators, sqlite3, multithreading, asyncio. The foundation
+          every AI engineer needs before writing production code.
+        </p>
+        <div class="hero-stats">
+          <div class="hstat"><span class="hstat-v">8</span><span class="hstat-l">Weekends</span></div>
+          <div class="hstat-div"></div>
+          <div class="hstat"><span class="hstat-v">48</span><span class="hstat-l">Hours</span></div>
+          <div class="hstat-div"></div>
+          <div class="hstat"><span class="hstat-v">16</span><span class="hstat-l">Modules</span></div>
+          <div class="hstat-div"></div>
+          <div class="hstat"><span class="hstat-v">0</span><span class="hstat-l">Prior exp. needed</span></div>
+        </div>
+        <div class="hero-ctas">
+          <a href="#curriculum" class="btn btn-primary">View Curriculum</a>
+          <a href="#pricing" class="btn btn-ghost">See Pricing</a>
+        </div>
+      </div>
+      <div class="hero-code">
+        <div class="code-window">
+          <div class="code-titlebar">
+            <span class="dot dot-r"></span>
+            <span class="dot dot-y"></span>
+            <span class="dot dot-g"></span>
+            <span class="code-filename">python_mastery.py</span>
+          </div>
+          <pre class="code-body"><code id="typedCode"></code></pre>
+          <div class="code-cursor" id="cursor"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>OOP &amp; Classes</span><span class="ticker-dot">◆</span>
+      <span>Dunder Methods</span><span class="ticker-dot">◆</span>
+      <span>Decorators</span><span class="ticker-dot">◆</span>
+      <span>Generators</span><span class="ticker-dot">◆</span>
+      <span>Collections</span><span class="ticker-dot">◆</span>
+      <span>asyncio</span><span class="ticker-dot">◆</span>
+      <span>Threading</span><span class="ticker-dot">◆</span>
+      <span>sqlite3</span><span class="ticker-dot">◆</span>
+      <span>Type Hints</span><span class="ticker-dot">◆</span>
+      <span>dataclasses</span><span class="ticker-dot">◆</span>
+      <span>Closures</span><span class="ticker-dot">◆</span>
+      <span>Context Managers</span><span class="ticker-dot">◆</span>
+      <span>Pattern Matching</span><span class="ticker-dot">◆</span>
+      <span>Python 3.13</span><span class="ticker-dot">◆</span>
+      <span>OOP &amp; Classes</span><span class="ticker-dot">◆</span>
+      <span>Dunder Methods</span><span class="ticker-dot">◆</span>
+      <span>Decorators</span><span class="ticker-dot">◆</span>
+      <span>Generators</span><span class="ticker-dot">◆</span>
+      <span>Collections</span><span class="ticker-dot">◆</span>
+      <span>asyncio</span><span class="ticker-dot">◆</span>
+    </div>
+  </div>
+
+  <!-- CURRICULUM OVERVIEW -->
+  <section class="section" id="curriculum">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">// curriculum</div>
+        <h2 class="section-title">8 Weekends. Complete Python.</h2>
+        <p class="section-sub">Four pillars, sixteen modules, zero hand-waving. Every topic is taught with working code, real exercises, and a project that uses it.</p>
+      </div>
+
+      <div class="pillars">
+
+        <div class="pillar">
+          <div class="pillar-header" style="--pillar-color: #3B82F6">
+            <div class="pillar-num">01</div>
+            <div class="pillar-info">
+              <h3>Foundations</h3>
+              <span>Weekends 1–2 · 12 hours</span>
+            </div>
+          </div>
+          <div class="pillar-modules">
+            <a href="curriculum.html#m01" class="module-card">
+              <span class="mod-num">M01</span>
+              <div>
+                <div class="mod-title">Syntax, Data Types &amp; Operators</div>
+                <div class="mod-tags"><span>int/float/complex</span><span>f-strings</span><span>walrus :=</span><span>bitwise</span></div>
+              </div>
+            </a>
+            <a href="curriculum.html#m02" class="module-card">
+              <span class="mod-num">M02</span>
+              <div>
+                <div class="mod-title">Control Flow &amp; Comprehensions</div>
+                <div class="mod-tags"><span>match/case</span><span>for/else</span><span>dict/set comp</span><span>generators</span></div>
+              </div>
+            </a>
+            <a href="curriculum.html#m03" class="module-card">
+              <span class="mod-num">M03</span>
+              <div>
+                <div class="mod-title">Functions — Args, Closures, Scope</div>
+                <div class="mod-tags"><span>*args/**kwargs</span><span>positional-only</span><span>closures</span><span>LEGB</span></div>
+              </div>
+            </a>
+            <a href="curriculum.html#m04" class="module-card">
+              <span class="mod-num">M04</span>
+              <div>
+                <div class="mod-title">Collections — All of Them</div>
+                <div class="mod-tags"><span>Counter</span><span>defaultdict</span><span>deque</span><span>namedtuple</span></div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="pillar">
+          <div class="pillar-header" style="--pillar-color: #10B981">
+            <div class="pillar-num">02</div>
+            <div class="pillar-info">
+              <h3>OOP &amp; Magic Methods</h3>
+              <span>Weekends 3–4 · 12 hours</span>
+            </div>
+          </div>
+          <div class="pillar-modules">
+            <a href="curriculum.html#m05" class="module-card">
+              <span class="mod-num">M05</span>
+              <div>
+                <div class="mod-title">Classes, Instances &amp; Methods</div>
+                <div class="mod-tags"><span>@property</span><span>@classmethod</span><span>__slots__</span><span>name mangling</span></div>
+              </div>
+            </a>
+            <a href="curriculum.html#m06" class="module-card">
+              <span class="mod-num">M06</span>
+              <div>
+                <div class="mod-title">Inheritance, MRO, ABC, Mixins</div>
+                <div class="mod-tags"><span>super()</span><span>MRO/C3</span><span>Protocol</span><span>abstractmethod</span></div>
+              </div>
+            </a>
+            <a href="curriculum.html#m07" class="module-card">
+              <span class="mod-num">M07</span>
+              <div>
+                <div class="mod-title">Dunder Methods — Repr &amp; Compare</div>
+                <div class="mod-tags"><span>__repr__</span><span>__eq__</span><span>__hash__</span><span>__format__</span></div>
+              </div>
+            </a>
+            <a href="curriculum.html#m08" class="module-card">
+              <span class="mod-num">M08</span>
+              <div>
+                <div class="mod-title">Dunder Methods — Ops &amp; Protocols</div>
+                <div class="mod-tags"><span>__add__</span><span>__iter__</span><span>__enter__</span><span>__call__</span></div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="pillar">
+          <div class="pillar-header" style="--pillar-color: #F59E0B">
+            <div class="pillar-num">03</div>
+            <div class="pillar-info">
+              <h3>Advanced Python</h3>
+              <span>Weekends 5–6 · 12 hours</span>
+            </div>
+          </div>
+          <div class="pillar-modules">
+            <a href="curriculum.html#m09" class="module-card">
+              <span class="mod-num">M09</span>
+              <div>
+                <div class="mod-title">Decorators — Function &amp; Class</div>
+                <div class="mod-tags"><span>@wraps</span><span>parametrised</span><span>@lru_cache</span><span>stacking</span></div>
+              </div>
+            </a>
+            <a href="curriculum.html#m10" class="module-card">
+              <span class="mod-num">M10</span>
+              <div>
+                <div class="mod-title">Generators, Iterators &amp; itertools</div>
+                <div class="mod-tags"><span>yield from</span><span>send()</span><span>chain/islice</span><span>groupby</span></div>
+              </div>
+            </a>
+            <a href="curriculum.html#m11" class="module-card">
+              <span class="mod-num">M11</span>
+              <div>
+                <div class="mod-title">Functional Python &amp; functools</div>
+                <div class="mod-tags"><span>map/filter</span><span>reduce</span><span>partial</span><span>singledispatch</span></div>
+              </div>
+            </a>
+            <a href="curriculum.html#m12" class="module-card">
+              <span class="mod-num">M12</span>
+              <div>
+                <div class="mod-title">Type Hints &amp; Dataclasses</div>
+                <div class="mod-tags"><span>PEP 695</span><span>Generic[T]</span><span>@dataclass</span><span>mypy strict</span></div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="pillar">
+          <div class="pillar-header" style="--pillar-color: #EF4444">
+            <div class="pillar-num">04</div>
+            <div class="pillar-info">
+              <h3>Systems &amp; Concurrency</h3>
+              <span>Weekends 7–8 · 12 hours</span>
+            </div>
+          </div>
+          <div class="pillar-modules">
+            <a href="curriculum.html#m13" class="module-card">
+              <span class="mod-num">M13</span>
+              <div>
+                <div class="mod-title">File I/O, JSON, CSV &amp; Exceptions</div>
+                <div class="mod-tags"><span>pathlib</span><span>ExceptionGroup</span><span>except*</span><span>chaining</span></div>
+              </div>
+            </a>
+            <a href="curriculum.html#m14" class="module-card">
+              <span class="mod-num">M14</span>
+              <div>
+                <div class="mod-title">Database Programming — sqlite3</div>
+                <div class="mod-tags"><span>CRUD</span><span>Row factory</span><span>transactions</span><span>ORM pattern</span></div>
+              </div>
+            </a>
+            <a href="curriculum.html#m15" class="module-card">
+              <span class="mod-num">M15</span>
+              <div>
+                <div class="mod-title">Multithreading &amp; GIL</div>
+                <div class="mod-tags"><span>Lock/RLock</span><span>Queue</span><span>Semaphore</span><span>ThreadPool</span></div>
+              </div>
+            </a>
+            <a href="curriculum.html#m16" class="module-card">
+              <span class="mod-num">M16</span>
+              <div>
+                <div class="mod-title">asyncio &amp; Testing</div>
+                <div class="mod-tags"><span>TaskGroup</span><span>async with</span><span>unittest</span><span>mock.patch</span></div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="curriculum-cta">
+        <a href="curriculum.html" class="btn btn-primary btn-lg">
+          Explore Full Curriculum →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DUNDER SHOWCASE -->
+  <section class="section section-dark" id="modules">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag" style="color:#F59E0B">// magic methods</div>
+        <h2 class="section-title" style="color:#F1F5F9">Every Dunder. Taught Deeply.</h2>
+        <p class="section-sub" style="color:#94A3B8">Most courses mention __init__ and move on. We cover the full protocol — 30+ dunder methods across two dedicated sessions.</p>
+      </div>
+      <div class="dunder-grid">
+        <div class="dunder-group">
+          <div class="dg-label">Representation</div>
+          <div class="dunder-pills">
+            <span>__repr__</span><span>__str__</span><span>__format__</span><span>__bytes__</span>
+          </div>
+        </div>
+        <div class="dunder-group">
+          <div class="dg-label">Comparison</div>
+          <div class="dunder-pills">
+            <span>__eq__</span><span>__lt__</span><span>__le__</span><span>__gt__</span><span>__ge__</span><span>__hash__</span>
+          </div>
+        </div>
+        <div class="dunder-group">
+          <div class="dg-label">Arithmetic</div>
+          <div class="dunder-pills">
+            <span>__add__</span><span>__radd__</span><span>__iadd__</span><span>__mul__</span><span>__truediv__</span><span>__mod__</span><span>__pow__</span>
+          </div>
+        </div>
+        <div class="dunder-group">
+          <div class="dg-label">Container</div>
+          <div class="dunder-pills">
+            <span>__getitem__</span><span>__setitem__</span><span>__delitem__</span><span>__contains__</span><span>__len__</span><span>__missing__</span>
+          </div>
+        </div>
+        <div class="dunder-group">
+          <div class="dg-label">Iteration</div>
+          <div class="dunder-pills">
+            <span>__iter__</span><span>__next__</span><span>__aiter__</span><span>__anext__</span>
+          </div>
+        </div>
+        <div class="dunder-group">
+          <div class="dg-label">Context &amp; Callable</div>
+          <div class="dunder-pills">
+            <span>__enter__</span><span>__exit__</span><span>__aenter__</span><span>__aexit__</span><span>__call__</span>
+          </div>
+        </div>
+        <div class="dunder-group">
+          <div class="dg-label">Object lifecycle</div>
+          <div class="dunder-pills">
+            <span>__init__</span><span>__new__</span><span>__del__</span><span>__bool__</span><span>__slots__</span><span>__class_getitem__</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINERS -->
+  <section class="section" id="trainers">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">// trainers</div>
+        <h2 class="section-title">Built by engineers. Taught by engineers.</h2>
+      </div>
+      <div class="trainers-grid">
+        <div class="trainer-card">
+          <div class="trainer-avatar" style="background: linear-gradient(135deg, #1E40AF, #3B82F6)">SM</div>
+          <div class="trainer-info">
+            <h3>Sanjay Mahto</h3>
+            <div class="trainer-role">Senior AI Engineer · Optum</div>
+            <div class="trainer-exp">10+ years as IC &amp; Engineering Manager</div>
+            <p class="trainer-bio">Led engineering teams building production Python systems at scale. Specialises in distributed systems, cloud-native architecture, and mentoring engineers into senior roles.</p>
+            <div class="trainer-contact">
+              <span class="contact-icon">📞</span>
+              <span>+91 77954 57284</span>
+            </div>
+          </div>
+        </div>
+        <div class="trainer-card">
+          <div class="trainer-avatar" style="background: linear-gradient(135deg, #0F766E, #14B8A6)">PK</div>
+          <div class="trainer-info">
+            <h3>Praveen Kumar</h3>
+            <div class="trainer-role">AI Engineer · JP Morgan Chase</div>
+            <div class="trainer-exp">6+ years in full-stack AI engineering</div>
+            <p class="trainer-bio">Builds production AI systems using Python, FastAPI, and cloud infrastructure. Deep expertise in Python internals, asyncio, and bridging academic ML to production engineering.</p>
+            <div class="trainer-contact">
+              <span class="contact-icon">📞</span>
+              <span>+91 62615 01868</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section section-dark" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag" style="color:#10B981">// pricing</div>
+        <h2 class="section-title" style="color:#F1F5F9">Simple, transparent pricing.</h2>
+        <p class="section-sub" style="color:#94A3B8">All tiers cover the complete 16-module curriculum. No hidden fees, no partial content.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pc-tier">Standard</div>
+          <div class="pc-price">₹50,000</div>
+          <div class="pc-emi">EMI available · ₹6,250/month</div>
+          <ul class="pc-features">
+            <li>Full 16-module curriculum</li>
+            <li>All lecture materials &amp; notes</li>
+            <li>8 weekend project starter kits</li>
+            <li>Community peer group access</li>
+            <li>Certificate on completion</li>
+            <li>Async Q&amp;A within 24 hours</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline">Enrol Now</a>
+        </div>
+        <div class="pricing-card pricing-card--featured">
+          <div class="pc-featured-badge">Most Popular</div>
+          <div class="pc-tier">Professional</div>
+          <div class="pc-price">₹85,000</div>
+          <div class="pc-emi">EMI available · ₹10,625/month</div>
+          <ul class="pc-features">
+            <li>Everything in Standard</li>
+            <li>Live Saturday sessions (3 hrs)</li>
+            <li>Weekly code review by trainer</li>
+            <li>Office hours (1 hr/week)</li>
+            <li>Industry guest sessions</li>
+            <li>LinkedIn profile review</li>
+            <li>1 mock technical interview</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Enrol Now</a>
+        </div>
+        <div class="pricing-card">
+          <div class="pc-tier">Elite</div>
+          <div class="pc-price">₹1,25,000</div>
+          <div class="pc-emi">or pay after placement</div>
+          <ul class="pc-features">
+            <li>Everything in Professional</li>
+            <li>Dedicated placement support</li>
+            <li>3 mock interviews with feedback</li>
+            <li>Resume + GitHub portfolio audit</li>
+            <li>Recruiter network access</li>
+            <li>6-month post-graduation support</li>
+            <li>ISA option available</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline">Enrol Now</a>
+        </div>
+      </div>
+      <div class="isa-note">
+        ISA option: pay ₹20,000 upfront · remainder after landing a job offer · capped at ₹1,50,000 total
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / CTA -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="cta-block">
+        <div class="cta-left">
+          <div class="cta-live">
+            <span class="live-dot"></span>
+            Cohort 01 starts 20 April 2026
+          </div>
+          <h2 class="cta-title">Ready to master Python?</h2>
+          <p class="cta-sub">Seats are limited. Reach out directly to either trainer to enrol or ask questions.</p>
+        </div>
+        <div class="cta-contacts">
+          <div class="contact-card">
+            <div class="cc-avatar" style="background:linear-gradient(135deg,#1E40AF,#3B82F6)">SM</div>
+            <div>
+              <div class="cc-name">Sanjay Mahto</div>
+              <a href="tel:+917795457284" class="cc-phone">+91 77954 57284</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="cc-avatar" style="background:linear-gradient(135deg,#0F766E,#14B8A6)">PK</div>
+            <div>
+              <div class="cc-name">Praveen Kumar</div>
+              <a href="tel:+916261501868" class="cc-phone">+91 62615 01868</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-bracket">&lt;</span>py<span class="logo-bracket">&gt;</span>
+          Python Zero to Professional
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="curriculum.html">Curriculum</a>
+          <a href="#trainers">Trainers</a>
+          <a href="#pricing">Pricing</a>
+        </div>
+        <div class="footer-copy">
+          © 2026 · Sanjay Mahto &amp; Praveen Kumar · Bridge Course for AI Engineering
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
