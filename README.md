@@ -1,6 +1,6 @@
-# Python Zero to Professional — Course Website
+# Python Novice to Professional — Course Website
 
-India's most comprehensive Python 3.13 course. Zero experience to production-grade Python engineering in 8 weekends.
+India's most comprehensive Python 3.13 course. Novice level to production-grade Python engineering in 8 weekends.
 
 ## Hosting on GitHub Pages
 
