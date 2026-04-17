@@ -1,4 +1,4 @@
-/* main.js — Python Zero to Pro course site */
+/* main.js — Python Novice to Pro course site */
 
 /* ── NAV SCROLL EFFECT ───────────────────────────── */
 const nav = document.getElementById('nav');
