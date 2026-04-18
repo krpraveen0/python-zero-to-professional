@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Engineering Curriculum - Python to Production AI</title>
+  <meta name="description" content="Production AI Engineering with Python and Cloud - 22 weeks, 132 hours, 6 phases, and 18+ cloud deployments covering cloud-native engineering, LLMs, RAG, agents, voice AI, MCP, MLOps, security, and senior capstone work." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../curriculum.css" />
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>ai<span class="logo-bracket">&gt;</span>
+        <span class="logo-text">AI Engineering</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html#curriculum">Python Bridge</a></li>
+        <li><a href="../curriculum.html">Python Deep Dive</a></li>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#stack">Tech Stack</a></li>
+        <li><a href="../dev-setup/" class="nav-cta">Dev Setup</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="curr-hero">
+    <div class="container">
+      <div class="curr-hero-inner">
+        <a href="../index.html" class="back-link">← Back to home</a>
+        <h1>AI Engineering Curriculum</h1>
+        <p>22 weeks - 132 hours - 6 phases - 18+ cloud deployments</p>
+        <div class="curr-stats">
+          <div class="cs"><span>22</span> Weeks</div>
+          <div class="cs"><span>132</span> Hours</div>
+          <div class="cs"><span>18+</span> Deployments</div>
+          <div class="cs"><span>6</span> Phases</div>
+          <div class="cs"><span>0</span> Cloud cost to student</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="curr-layout">
+    <aside class="curr-toc">
+      <div class="toc-inner">
+        <div class="toc-section">
+          <div class="toc-pillar" style="--tc:#3B82F6">Overview</div>
+          <a href="#overview" class="toc-link">Program overview</a>
+          <a href="#stack" class="toc-link">Technology stack</a>
+          <a href="#method" class="toc-link">Teaching method</a>
+          <a href="#assessment" class="toc-link">Assessment</a>
+        </div>
+        <div class="toc-section">
+          <div class="toc-pillar" style="--tc:#3B82F6">Phase 1</div>
+          <a href="#w01" class="toc-link">Week 1 - Terraform + AWS</a>
+          <a href="#w02" class="toc-link">Week 2 - Validation + SQL</a>
+          <a href="#w03" class="toc-link">Week 3 - Async + agents</a>
+          <a href="#w04" class="toc-link">Week 4 - MLflow + ECS</a>
+        </div>
+        <div class="toc-section">
+          <div class="toc-pillar" style="--tc:#10B981">Phase 2</div>
+          <a href="#w05" class="toc-link">Week 5 - LoRA fine-tuning</a>
+          <a href="#w06" class="toc-link">Week 6 - NLP + HF Spaces</a>
+        </div>
+        <div class="toc-section">
+          <div class="toc-pillar" style="--tc:#F59E0B">Phase 3</div>
+          <a href="#w07" class="toc-link">Week 7 - LLM engineering</a>
+          <a href="#w08" class="toc-link">Week 8 - RAG + RAGAS</a>
+          <a href="#w09" class="toc-link">Week 9 - LangGraph agents</a>
+          <a href="#w10" class="toc-link">Week 10 - Multi-agent systems</a>
+        </div>
+        <div class="toc-section">
+          <div class="toc-pillar" style="--tc:#8B5CF6">Phase 4</div>
+          <a href="#w11" class="toc-link">Week 11 - Voice AI</a>
+          <a href="#w12" class="toc-link">Week 12 - MCP servers</a>
+          <a href="#w13" class="toc-link">Week 13 - SLM routing</a>
+        </div>
+        <div class="toc-section">
+          <div class="toc-pillar" style="--tc:#EF4444">Phase 5</div>
+          <a href="#w14" class="toc-link">Week 14 - GCP MLOps</a>
+          <a href="#w15" class="toc-link">Week 15 - System design</a>
+          <a href="#w16" class="toc-link">Week 16 - Auth + RBAC</a>
+          <a href="#w17" class="toc-link">Week 17 - Safety + red team</a>
+        </div>
+        <div class="toc-section">
+          <div class="toc-pillar" style="--tc:#14B8A6">Phase 6</div>
+          <a href="#w18" class="toc-link">Week 18 - AI ROI</a>
+          <a href="#w19" class="toc-link">Week 19 - Leadership</a>
+          <a href="#w20" class="toc-link">Week 20 - Capstone plan</a>
+          <a href="#w21" class="toc-link">Week 21 - Core build</a>
+          <a href="#w22" class="toc-link">Week 22 - Launch + demo</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="curr-main">
+      <div class="module" id="overview">
+        <div class="module-head" style="--mc:#3B82F6">
+          <div class="mh-left">
+            <span class="mh-num">OVERVIEW</span>
+            <div>
+              <h2>Production AI Engineering with Python and Cloud</h2>
+              <span class="mh-meta">22 weeks, every week ends in a deployed artifact</span>
+            </div>
+          </div>
+          <span class="mh-badge" style="--mc:#3B82F6">Program map</span>
+        </div>
+        <div class="module-body">
+          <div class="dunder-grid">
+            <div class="dunder-group">
+              <div class="dg-label">Outcome</div>
+              <div class="dunder-pills">
+                <span>Cloud-native AI systems</span>
+                <span>LLM integration</span>
+                <span>RAG and agents</span>
+                <span>MLOps and security</span>
+              </div>
+            </div>
+            <div class="dunder-group">
+              <div class="dg-label">Format</div>
+              <div class="dunder-pills">
+                <span>Saturday live session</span>
+                <span>Async lab hours</span>
+                <span>Decision-first teaching</span>
+                <span>Real deployments</span>
+              </div>
+            </div>
+            <div class="dunder-group">
+              <div class="dg-label">Deployment targets</div>
+              <div class="dunder-pills">
+                <span>AWS Lambda</span>
+                <span>ECS Fargate</span>
+                <span>HF Hub</span>
+                <span>Railway</span>
+                <span>Cloud Run</span>
+                <span>Grafana Cloud</span>
+              </div>
+            </div>
+            <div class="dunder-group">
+              <div class="dg-label">Career signal</div>
+              <div class="dunder-pills">
+                <span>Senior-track portfolio</span>
+                <span>LLM traces</span>
+                <span>ADR discipline</span>
+                <span>Red-team evidence</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pillar-divider" style="--pc:#3B82F6">
+        <span>Phase 1 - Cloud-Native Engineering Foundations - Weeks 1 to 4</span>
+      </div>
+
+      <div class="module" id="w01">
+        <div class="module-head" style="--mc:#3B82F6"><div class="mh-left"><span class="mh-num">W01</span><div><h2>Dev Environment, Terraform Foundations and First AWS Deploy</h2><span class="mh-meta">6 hours - AWS bootstrap plus CI baseline</span></div></div><span class="mh-badge" style="--mc:#3B82F6">Phase 1</span></div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span><code>uv</code> as the default package manager, replacing pip + venv + pip-tools</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span><code>pyproject.toml</code> as the single source of truth for project tools</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span><code>pre-commit</code> hooks for Ruff, secrets detection, and file-size safety</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Terraform core concepts, remote state, S3 bucket, and DynamoDB lock table</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>AWS infra bootstrap: Lambda, S3, SQS, SNS, IAM, and GitHub Actions CI</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Week deliverable</div><div class="pb-body">Live Lambda endpoint, Terraform state in S3, green CI badge, and billing alarm active.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="w02">
+        <div class="module-head" style="--mc:#3B82F6"><div class="mh-left"><span class="mh-num">W02</span><div><h2>Data Validation, Bayesian Decision Engines and SQL on Cloud</h2><span class="mh-meta">6 hours - secure data handling and automated decisions</span></div></div><span class="mh-badge" style="--mc:#3B82F6">Phase 1</span></div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Pydantic v2 models, field validators, model validators, and frozen models</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Bayesian decision logic for risk scoring and probabilistic reasoning</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Hard rules vs soft scoring for compliance and threshold-based decisions</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>DynamoDB design, TTL expiry, and auditability for stored decisions</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Athena SQL queries on production decision data in real time</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Week deliverable</div><div class="pb-body">Risk scoring engine writes auditable decisions to DynamoDB with TTL and exposes queryable history via Athena.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="w03">
+        <div class="module-head" style="--mc:#3B82F6"><div class="mh-left"><span class="mh-num">W03</span><div><h2>Async Python, Intelligent Agents and Feature Engineering</h2><span class="mh-meta">6 hours - concurrency and data leakage control</span></div></div><span class="mh-badge" style="--mc:#3B82F6">Phase 1</span></div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span><code>asyncio</code> patterns: Task, Semaphore, Queue, and error-aware gathering</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Async FastAPI with lifespan hooks, SSE, and background work</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Async clients such as <code>asyncpg</code> and <code>aioboto3</code></span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>A* search plus an agent loop: perceive, reason, act, observe</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Feature engineering discipline, leakage avoidance, Glue ETL, and pooling</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Week deliverable</div><div class="pb-body">An async A* route-planning agent deployed to AWS Lambda with integration tests running in CI.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="w04">
+        <div class="module-head" style="--mc:#3B82F6"><div class="mh-left"><span class="mh-num">W04</span><div><h2>ML Engineering, Remote MLflow Tracking, Docker and ECS Deploy</h2><span class="mh-meta">6 hours - model training to production serving</span></div></div><span class="mh-badge" style="--mc:#3B82F6">Phase 1</span></div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>ML pipeline structure: feature engineering, training, evaluation, packaging, serving</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>MLflow on Dagshub for remote experiment tracking and run comparison</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Champion/challenger pattern and evaluation beyond AUC</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Multi-stage Dockerfiles and ECR image publishing</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>ECS Fargate deployment with automated CI/CD checks</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Week deliverable</div><div class="pb-body">A churn prediction API live on ECS Fargate plus a shareable Dagshub MLflow dashboard.</div></div>
+        </div>
+      </div>
+
+      <div class="pillar-divider" style="--pc:#10B981">
+        <span>Phase 2 - Deep Learning, Fine-Tuning and NLP Engineering - Weeks 5 to 6</span>
+      </div>
+
+      <div class="module" id="w05">
+        <div class="module-head" style="--mc:#10B981"><div class="mh-left"><span class="mh-num">W05</span><div><h2>GPU Fine-Tuning Lab - LoRA on Real Hardware and Hugging Face Hub</h2><span class="mh-meta">6 hours - Kaggle P100 and adapter publishing</span></div></div><span class="mh-badge" style="--mc:#10B981">Phase 2</span></div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>GPU memory arithmetic and why quantization exists</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Kaggle GPU setup, CUDA verification, and libraries for LoRA work</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>PEFT LoRA theory, rank, and adapter training targets</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>4-bit quantization, training arguments, and mixed precision</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>W&B tracking and Hugging Face Hub adapter publishing</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Week deliverable</div><div class="pb-body">Fine-tuned model adapter published to Hugging Face Hub with a public URL and W&B dashboard evidence.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="w06">
+        <div class="module-head" style="--mc:#10B981"><div class="mh-left"><span class="mh-num">W06</span><div><h2>NLP Engineering - Embeddings, Hybrid Search, Bias Auditing and HF Spaces</h2><span class="mh-meta">6 hours - search, evaluation, and public demos</span></div></div><span class="mh-badge" style="--mc:#10B981">Phase 2</span></div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Sentence embeddings, normalization, and cosine similarity</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Hybrid retrieval with dense vectors, BM25, and cross-encoders</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Evaluation frameworks with ROUGE, BERTScore, and retrieval checks</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Bias auditing across demographic slices with measurable reporting</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Gradio apps on Hugging Face Spaces with a permanent public URL</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Week deliverable</div><div class="pb-body">A live Gradio NLP demo on Hugging Face Spaces plus a formal bias audit report.</div></div>
+        </div>
+      </div>
+
+      <div class="pillar-divider" style="--pc:#F59E0B">
+        <span>Phase 3 - LLMs, Context Engineering, Production RAG and Agentic AI - Weeks 7 to 10</span>
+      </div>
+
+      <div class="module" id="w07">
+        <div class="module-head" style="--mc:#F59E0B"><div class="mh-left"><span class="mh-num">W07</span><div><h2>LLM Engineering - Streaming, Structured Outputs, Cost Tracking and LangSmith</h2><span class="mh-meta">6 hours - production LLM integration</span></div></div><span class="mh-badge" style="--mc:#F59E0B">Phase 3</span></div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Token prediction, temperature, stop sequences, and context windows</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Pydantic and Instructor for schema-validated structured outputs</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>FastAPI streaming, SSE, and live token delivery</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Token budgeting, request-level cost logging, and prompt injection defenses</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>LangSmith tracing, semantic caching, and secure secret handling</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Week deliverable</div><div class="pb-body">A streaming LLM API with Redis semantic cache, LangSmith dashboard, and verified cost savings.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="w08">
+        <div class="module-head" style="--mc:#F59E0B"><div class="mh-left"><span class="mh-num">W08</span><div><h2>Context Engineering and Production RAG with RAGAS Evaluation</h2><span class="mh-meta">6 hours - search quality and retrieval traces</span></div></div><span class="mh-badge" style="--mc:#F59E0B">Phase 3</span></div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Hybrid retrieval: dense vectors, BM25 sparse search, and reciprocal rank fusion</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Cross-encoder reranking for top-k refinement</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>RAGAS metrics: faithfulness, answer relevancy, precision, and recall</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Multi-modal RAG introduction and document grounding strategy</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Railway deployment with automated git push flows</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Week deliverable</div><div class="pb-body">A live RAG API on Railway plus a RAGAS report and LangSmith retrieval trace dashboard.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="w09">
+        <div class="module-head" style="--mc:#F59E0B"><div class="mh-left"><span class="mh-num">W09</span><div><h2>Agentic AI - LangGraph, Six Design Patterns and Agent Evaluation</h2><span class="mh-meta">6 hours - typed graph agents and safety checks</span></div></div><span class="mh-badge" style="--mc:#F59E0B">Phase 3</span></div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>ReAct, Reflection, Plan and Execute, Tool Use, Multi-Agent, Self-Refinement</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>LangGraph StateGraph design with typed state and conditional edges</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Human-in-the-loop checkpoints and resume flows</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Tool schema definition, memory architecture, and evaluation metrics</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Instructor validation and A2A protocol awareness</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Week deliverable</div><div class="pb-body">A LangGraph research agent that implements all six design patterns and produces a full trace.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="w10">
+        <div class="module-head" style="--mc:#F59E0B"><div class="mh-left"><span class="mh-num">W10</span><div><h2>Multi-Agent Systems - SQS Orchestration, Temporal and Human-in-the-Loop</h2><span class="mh-meta">6 hours - durable execution and nested observability</span></div></div><span class="mh-badge" style="--mc:#F59E0B">Phase 3</span></div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Temporal workflows, retries, and durable Python orchestration</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>HITL escalation thresholds and guardian agent design</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Inter-agent communication with SQS and shared Supabase state</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Per-agent cost budgets and hard cut-offs</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>LangSmith parent-child traces for nested agent hierarchies</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Week deliverable</div><div class="pb-body">A three-agent customer support system with SQS queuing, HITL escalation, Temporal, and full traces.</div></div>
+        </div>
+      </div>
+
+      <div class="pillar-divider" style="--pc:#8B5CF6">
+        <span>Phase 4 - Voice AI, MCP Servers and SLM Engineering - Weeks 11 to 13</span>
+      </div>
+
+      <div class="module" id="w11">
+        <div class="module-head" style="--mc:#8B5CF6"><div class="mh-left"><span class="mh-num">W11</span><div><h2>Voice AI Engineering - Complete Production Stack</h2><span class="mh-meta">6 hours - real-time audio systems</span></div></div><span class="mh-badge" style="--mc:#8B5CF6">Phase 4</span></div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>End-to-end Voice AI stack from STT to LLM to TTS</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>WebRTC, WebSocket, LiveKit, and Pipecat orchestration</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Voice activity detection and barge-in handling</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Latency budget engineering for sub-350ms response time</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Telephony bridge patterns for real customer support calls</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Week deliverable</div><div class="pb-body">A live voice agent that handles a customer support call with verified sub-350ms response latency.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="w12">
+        <div class="module-head" style="--mc:#8B5CF6"><div class="mh-left"><span class="mh-num">W12</span><div><h2>MCP Server Development and A2A Protocol Implementation</h2><span class="mh-meta">6 hours - production tools and interoperability</span></div></div><span class="mh-badge" style="--mc:#8B5CF6">Phase 4</span></div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>MCP architecture over JSON-RPC 2.0 with Streamable HTTP transport</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Python SDK and TypeScript SDK tool creation patterns</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>MCP security risks, tool poisoning, and MCP-scan validation</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>MCP gateway architecture for auth, routing, and rate limiting</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>A2A AgentCard capabilities and cross-client testing</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Week deliverable</div><div class="pb-body">A production MCP server verified against Claude Desktop, ChatGPT Desktop, and Cursor IDE.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="w13">
+        <div class="module-head" style="--mc:#8B5CF6"><div class="mh-left"><span class="mh-num">W13</span><div><h2>SLM Engineering - On-Device AI and Intelligent Model Routing</h2><span class="mh-meta">6 hours - local inference and cloud fallback</span></div></div><span class="mh-badge" style="--mc:#8B5CF6">Phase 4</span></div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>SLM vs LLM decision matrix for cost, privacy, latency, and capability</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Quantization formats such as GGUF, GPTQ, and AWQ</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span><code>llama.cpp</code>, Ollama, and speculative decoding</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Hybrid routing between local Phi-3 and cloud Llama-3-70B</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>ExecuTorch for edge deployment and cost comparison dashboards</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Week deliverable</div><div class="pb-body">A hybrid routing system with local SLM inference, cloud fallback, and a live cost comparison dashboard.</div></div>
+        </div>
+      </div>
+
+      <div class="pillar-divider" style="--pc:#EF4444">
+        <span>Phase 5 - MLOps, System Design, Auth and Reliability - Weeks 14 to 17</span>
+      </div>
+
+      <div class="module" id="w14">
+        <div class="module-head" style="--mc:#EF4444"><div class="mh-left"><span class="mh-num">W14</span><div><h2>Full MLOps - GCP Cloud Run, Terraform, Grafana, Canary Deploys and Drift Detection</h2><span class="mh-meta">6 hours - production monitoring and release safety</span></div></div><span class="mh-badge" style="--mc:#EF4444">Phase 5</span></div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Terraform on GCP and reusable Cloud Run modules</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>GCS-backed Terraform state and secure service account access</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>GitHub Actions CD, multi-stage Docker, and smoke testing</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Canary deployment traffic splits and automated evaluation</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Grafana Cloud, Infracost, and Evidently AI drift checks</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Week deliverable</div><div class="pb-body">An AI service live on Cloud Run with IaC, a public Grafana dashboard, and Infracost CI output.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="w15">
+        <div class="module-head" style="--mc:#EF4444"><div class="mh-left"><span class="mh-num">W15</span><div><h2>System Design for AI - Scalability, Caching, Load Testing and Architecture Decisions</h2><span class="mh-meta">6 hours - pure design reasoning</span></div></div><span class="mh-badge" style="--mc:#EF4444">Phase 5</span></div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Database selection matrix across Postgres, DynamoDB, Pinecone, and Redis</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Connection pooling, gateway patterns, and rate limiting</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Locust load testing and finding the breaking point before launch</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Architecture critique exercises for flawed systems</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Architecture Decision Records with explicit options and consequences</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Week deliverable</div><div class="pb-body">A system design document for a 100K-user RAG system plus an ADR and a Locust load test report.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="w16">
+        <div class="module-head" style="--mc:#EF4444"><div class="mh-left"><span class="mh-num">W16</span><div><h2>Authentication, RBAC and Multi-Tenant Security</h2><span class="mh-meta">6 hours - identity and tenant isolation</span></div></div><span class="mh-badge" style="--mc:#EF4444">Phase 5</span></div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>JWT structure, OAuth2 password flow, and refresh token patterns</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>API key management, bcrypt hashing, and scoped access</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>RBAC role matrices and FastAPI dependency injection</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Multi-tenant isolation across Pinecone, DynamoDB, and VPC layouts</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Audit logging for agent actions and MCP authentication flows</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Week deliverable</div><div class="pb-body">A multi-tenant AI API with JWT auth, RBAC roles, VPC isolation, and a CloudWatch audit trail.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="w17">
+        <div class="module-head" style="--mc:#EF4444"><div class="mh-left"><span class="mh-num">W17</span><div><h2>AI Safety Engineering - Red-Teaming, Reliability and EU AI Act</h2><span class="mh-meta">6 hours - adversarial testing and compliance</span></div></div><span class="mh-badge" style="--mc:#EF4444">Phase 5</span></div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>OWASP LLM Top 10 and concrete defences for each class</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>MCP security deep dive and prompt injection flow analysis</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>EU AI Act risk classification in practical engineering terms</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>SLO, SLI, and error budget design for production AI systems</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Agent containment, chaos engineering, and incident simulations</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Week deliverable</div><div class="pb-body">A red-team test suite with 20+ adversarial tests and an EU AI Act compliance checklist for the capstone system.</div></div>
+        </div>
+      </div>
+
+      <div class="pillar-divider" style="--pc:#14B8A6">
+        <span>Phase 6 - Technical Leadership, AI ROI and Senior Capstone - Weeks 18 to 22</span>
+      </div>
+
+      <div class="module" id="w18">
+        <div class="module-head" style="--mc:#14B8A6"><div class="mh-left"><span class="mh-num">W18</span><div><h2>AI ROI Engineering and Project Evaluation Frameworks</h2><span class="mh-meta">6 hours - should this be built?</span></div></div><span class="mh-badge" style="--mc:#14B8A6">Phase 6</span></div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Problem clarity, data availability, and measurable success metrics</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>LLM and GPU cost modelling across request scale points</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Build vs buy vs API decisions and vendor lock-in tradeoffs</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Kill criteria, expected value, and stakeholder communication</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Portfolio exercise: funded and rejected AI proposals</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Week deliverable</div><div class="pb-body">An AI project evaluation report with 3 funded projects and 2 killed projects, each justified with cost data.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="w19">
+        <div class="module-head" style="--mc:#14B8A6"><div class="mh-left"><span class="mh-num">W19</span><div><h2>Technical Leadership, ADRs, RFCs, Code Review and Estimation Under Uncertainty</h2><span class="mh-meta">6 hours - review quality and decision writing</span></div></div><span class="mh-badge" style="--mc:#14B8A6">Phase 6</span></div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>ADRs, RFCs, and when each is required</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Feedback language that improves code without demoralising the author</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Estimation under uncertainty and confidence intervals</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Technical debt triage and prioritisation frameworks</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Peer code reviews graded on depth, not just completion</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Week deliverable</div><div class="pb-body">A complete ADR, an RFC for a system change, and three graded peer code reviews with written feedback.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="w20">
+        <div class="module-head" style="--mc:#14B8A6"><div class="mh-left"><span class="mh-num">W20</span><div><h2>Senior Capstone - Architecture, Infrastructure and CI/CD</h2><span class="mh-meta">6 hours - start of the integrated build</span></div></div><span class="mh-badge" style="--mc:#14B8A6">Phase 6</span></div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Capstone architecture design and ADR writing</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Terraform provisioning for the whole AI platform</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>CI/CD pipeline setup and deployment validation</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Service boundaries for the final senior project</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Portfolio expectations and demo planning</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Week deliverable</div><div class="pb-body">The capstone architecture, ADR, and complete infrastructure and CI/CD foundations are in place.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="w21">
+        <div class="module-head" style="--mc:#14B8A6"><div class="mh-left"><span class="mh-num">W21</span><div><h2>Senior Capstone - Core Integration</h2><span class="mh-meta">6 hours - product surface and service wiring</span></div></div><span class="mh-badge" style="--mc:#14B8A6">Phase 6</span></div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>RAG knowledge base and voice agent endpoint</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>LangGraph multi-agent system integration</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>MCP server integration and tool exposure</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>SLM routing layer and service fallback logic</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Hybrid AWS and GCP service stitching</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Week deliverable</div><div class="pb-body">The core product features are wired together into one senior-track AI platform.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="w22">
+        <div class="module-head" style="--mc:#14B8A6"><div class="mh-left"><span class="mh-num">W22</span><div><h2>Senior Capstone - Auth, Monitoring, Red Team, Postmortem and Demo</h2><span class="mh-meta">6 hours - launch, evidence, and presentation</span></div></div><span class="mh-badge" style="--mc:#14B8A6">Phase 6</span></div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Authentication layer, monitoring dashboard, and load test coverage</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Red-team suite, incident postmortem, and audit readiness</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Portfolio-ready README and documentation polish</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Public URL, traces, and shareable evidence for hiring managers</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Five-minute cohort demo and final presentation practice</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Week deliverable</div><div class="pb-body">A live AI platform URL, Grafana share link, LangSmith traces, red-team report, and a 5-minute demo video.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="stack">
+        <div class="module-head" style="--mc:#3B82F6">
+          <div class="mh-left">
+            <span class="mh-num">STACK</span>
+            <div>
+              <h2>Technology Stack</h2>
+              <span class="mh-meta">All tooling chosen for production relevance and free-tier lab support</span>
+            </div>
+          </div>
+          <span class="mh-badge" style="--mc:#3B82F6">Reference</span>
+        </div>
+        <div class="module-body">
+          <div class="dunder-grid">
+            <div class="dunder-group"><div class="dg-label">Engineering base</div><div class="dunder-pills"><span>Python 3.11+</span><span>uv</span><span>ruff</span><span>mypy</span><span>pytest</span></div></div>
+            <div class="dunder-group"><div class="dg-label">Infrastructure</div><div class="dunder-pills"><span>Terraform</span><span>AWS Lambda</span><span>ECS</span><span>GCP Cloud Run</span><span>Docker</span></div></div>
+            <div class="dunder-group"><div class="dg-label">AI systems</div><div class="dunder-pills"><span>LangChain</span><span>LangGraph</span><span>RAGAS</span><span>Instructor</span><span>Hugging Face</span></div></div>
+            <div class="dunder-group"><div class="dg-label">Observability</div><div class="dunder-pills"><span>LangSmith</span><span>Grafana Cloud</span><span>CloudWatch</span><span>Infracost</span><span>Evidently AI</span></div></div>
+            <div class="dunder-group"><div class="dg-label">Specialised weeks</div><div class="dunder-pills"><span>Deepgram</span><span>ElevenLabs</span><span>LiveKit</span><span>MCP SDKs</span><span>llama.cpp</span><span>Ollama</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="module" id="method">
+        <div class="module-head" style="--mc:#F59E0B">
+          <div class="mh-left">
+            <span class="mh-num">METHOD</span>
+            <div>
+              <h2>Teaching Methodology</h2>
+              <span class="mh-meta">Decision-first instruction with incident simulations and architecture critique</span>
+            </div>
+          </div>
+          <span class="mh-badge" style="--mc:#F59E0B">Process</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Every session starts with a decision problem before any code is written.</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Production incident simulations train diagnosis from metrics, not guesswork.</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Architecture critique exercises expose failure modes under load and cost pressure.</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Peer code review is mandatory and graded on quality of reasoning.</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Documentation discipline includes ADRs, RFCs, traces, and incident write-ups.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="module" id="assessment">
+        <div class="module-head" style="--mc:#14B8A6">
+          <div class="mh-left">
+            <span class="mh-num">ASSESSMENT</span>
+            <div>
+              <h2>Assessment and Graduate Portfolio</h2>
+              <span class="mh-meta">Weekly deployables, peer review quality, and a public capstone portfolio</span>
+            </div>
+          </div>
+          <span class="mh-badge" style="--mc:#14B8A6">Outcomes</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Weekly deliverables require a live URL, Terraform-managed infra, tests, and CI passing.</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Weekly project work carries the largest grading weight and must be production-ready.</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Peer reviews are evaluated on depth and usefulness, not just completion.</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>The capstone combines ADRs, red-team results, load tests, and a live demo.</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Every graduate leaves with public artifacts a hiring manager can inspect immediately.</span></div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <section class="curr-cta">
+    <div class="container">
+      <div class="cta-block">
+        <div class="cta-left">
+          <div class="cta-live"><span class="live-dot"></span>Cohort 01 - April 2026</div>
+          <h2 class="cta-title">Build the full AI engineering stack.</h2>
+          <p class="cta-sub">If you have the Python bridge course already, this is the next route.</p>
+        </div>
+        <div class="cta-contacts">
+          <a href="../curriculum.html" class="btn btn-outline">Python bridge course</a>
+          <a href="../dev-setup/" class="btn btn-primary">Dev setup route</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="../main.js"></script>
+</body>
+</html>
