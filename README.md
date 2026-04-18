@@ -12,22 +12,27 @@ India's most comprehensive Python 3.13 course. Novice level to production-grade 
 ## Files
 
 ```
-index.html        — Landing page (hero, curriculum overview, trainers, pricing)
-curriculum.html   — Full 16-module curriculum with all topics and code examples
-styles.css        — Shared styles (dark theme, typography, layout)
-curriculum.css    — Curriculum page specific styles
-main.js           — Animations, typewriter, scroll effects, TOC highlighting
-README.md         — This file
+index.html             — Landing page (hero, curriculum overview, routes, trainers, pricing)
+curriculum.html        — Full 16-module Python bridge curriculum
+ai-engineering/        — 22-week AI engineering curriculum route
+dev-setup/             — VS Code and Python development setup route
+styles.css             — Shared styles (dark theme, typography, layout)
+curriculum.css         — Curriculum page specific styles
+main.js                — Animations, typewriter, scroll effects, TOC highlighting
+README.md              — This file
 ```
 
 ## What's on the site
 
 - **Hero** with animated code typewriter (rotates through dunder methods, async, decorators examples)
 - **Curriculum overview** — all 4 pillars, 16 modules, with tags
+- **Course routes** — bridge course, AI engineering route, and dev setup route
 - **Dunder methods showcase** — all 30+ magic methods with hover effects
 - **Trainers section** — Sanjay Mahto & Praveen Kumar with contact numbers
 - **Pricing** — Standard / Professional / Elite with ISA option
 - **Full curriculum page** — every module with 10 topics, code examples, project exercise
+- **AI engineering page** — 22-week production curriculum with weekly deliverables and stack overview
+- **Dev setup page** — VS Code, uv, Pylance, debugpy, and project workflow guide
 - **Sticky TOC sidebar** on curriculum page with active highlight on scroll
 - **Fully responsive** — works on mobile
 

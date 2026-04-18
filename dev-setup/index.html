@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Development Setup Guide - VS Code and Python</title>
+  <meta name="description" content="VS Code Python development setup guide covering installation, extensions, interpreter selection, settings, linting, formatting, debugging, testing, GitHub integration, Jupyter, tasks, snippets, profiles, and project structure." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../curriculum.css" />
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>vs<span class="logo-bracket">&gt;</span>
+        <span class="logo-text">Python Dev Setup</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html#curriculum">Python Bridge</a></li>
+        <li><a href="../ai-engineering/">AI Engineering</a></li>
+        <li><a href="#install">Install</a></li>
+        <li><a href="#editor">Editor</a></li>
+        <li><a href="#git">GitHub</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="curr-hero">
+    <div class="container">
+      <div class="curr-hero-inner">
+        <a href="../index.html" class="back-link">← Back to home</a>
+        <h1>VS Code Python Development Guide</h1>
+        <p>Install once, configure cleanly, and keep the workflow reproducible</p>
+        <div class="curr-stats">
+          <div class="cs"><span>3.13</span> Python target</div>
+          <div class="cs"><span>uv</span> Recommended env manager</div>
+          <div class="cs"><span>Pylance</span> Language intelligence</div>
+          <div class="cs"><span>debugpy</span> Debugger</div>
+          <div class="cs"><span>Profiles</span> Per-course setup</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="curr-layout">
+    <aside class="curr-toc">
+      <div class="toc-inner">
+        <div class="toc-section">
+          <div class="toc-pillar" style="--tc:#3B82F6">Start here</div>
+          <a href="#install" class="toc-link">Install VS Code + Python</a>
+          <a href="#macos-setup" class="toc-link">macOS full setup</a>
+          <a href="#windows-setup" class="toc-link">Windows full setup</a>
+          <a href="#linux-setup" class="toc-link">Linux full setup</a>
+          <a href="#navigate" class="toc-link">Terminal navigation basics</a>
+          <a href="#extensions" class="toc-link">Extensions</a>
+          <a href="#env" class="toc-link">Interpreter and envs</a>
+          <a href="#trust" class="toc-link">Workspace trust</a>
+        </div>
+        <div class="toc-section">
+          <div class="toc-pillar" style="--tc:#10B981">Daily workflow</div>
+          <a href="#editor" class="toc-link">Settings and editor</a>
+          <a href="#lint" class="toc-link">Lint and format</a>
+          <a href="#debug" class="toc-link">Debugging</a>
+          <a href="#test" class="toc-link">Testing</a>
+          <a href="#troubleshoot" class="toc-link">Common errors and fixes</a>
+        </div>
+        <div class="toc-section">
+          <div class="toc-pillar" style="--tc:#F59E0B">Team workflow</div>
+          <a href="#git" class="toc-link">Git and GitHub</a>
+          <a href="#jupyter" class="toc-link">Jupyter</a>
+          <a href="#tasks" class="toc-link">Tasks and snippets</a>
+          <a href="#profiles" class="toc-link">Profiles</a>
+          <a href="#structure" class="toc-link">Project structure</a>
+          <a href="#instructor-checklist" class="toc-link">Instructor setup audit</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="curr-main">
+      <div class="module" id="install">
+        <div class="module-head" style="--mc:#3B82F6">
+          <div class="mh-left">
+            <span class="mh-num">01</span>
+            <div>
+              <h2>Install VS Code, Python, and uv on macOS, Windows, and Linux</h2>
+              <span class="mh-meta">Download sources, command-by-command setup, and verification</span>
+            </div>
+          </div>
+          <span class="mh-badge" style="--mc:#3B82F6">Setup</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Download VS Code only from <a href="https://code.visualstudio.com/Download" target="_blank" rel="noopener noreferrer">code.visualstudio.com/Download</a>.</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Download Python only from <a href="https://www.python.org/downloads/" target="_blank" rel="noopener noreferrer">python.org/downloads</a> or trusted package managers listed below.</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Install <code>uv</code> from <a href="https://docs.astral.sh/uv/getting-started/installation/" target="_blank" rel="noopener noreferrer">docs.astral.sh/uv</a> and use it as your default environment + package tool.</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Use one project folder per course project and always open that folder directly in VS Code.</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Run the verification checklist so you know the setup is fully correct before coding.</span></div>
+          </div>
+
+          <div class="project-box">
+            <div class="pb-title" id="macos-setup">macOS full setup (recommended: Homebrew + zsh)</div>
+            <div class="pb-body">
+              1) Download VS Code from the official site and drag it to <code>Applications</code>.<br/>
+              2) Open VS Code, press <code>Cmd+Shift+P</code>, run <code>Shell Command: Install 'code' command in PATH</code>.<br/>
+              3) Install Python with Homebrew:<br/>
+              <code>brew install python@3.13</code><br/>
+              4) Install uv:<br/>
+              <code>curl -LsSf https://astral.sh/uv/install.sh | sh</code><br/>
+              5) Reload terminal and verify:<br/>
+              <code>python3 --version</code> · <code>uv --version</code> · <code>code --version</code>
+            </div>
+          </div>
+
+          <div class="project-box">
+            <div class="pb-title" id="windows-setup">Windows full setup (recommended: winget + PowerShell)</div>
+            <div class="pb-body">
+              1) Download VS Code from the official site or install with Winget:<br/>
+              <code>winget install Microsoft.VisualStudioCode</code><br/>
+              2) Install Python 3.13 with Winget:<br/>
+              <code>winget install Python.Python.3.13</code><br/>
+              3) During python.org installer flow, ensure <code>Add python.exe to PATH</code> is enabled.<br/>
+              4) Install uv in PowerShell:<br/>
+              <code>powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"</code><br/>
+              If blocked by policy, run once in PowerShell (as current user):<br/>
+              <code>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser</code><br/>
+              Then re-run the uv install command.<br/>
+              5) Restart PowerShell and verify:<br/>
+              <code>python --version</code> · <code>uv --version</code> · <code>code --version</code>
+            </div>
+          </div>
+
+          <div class="project-box">
+            <div class="pb-title" id="linux-setup">Linux full setup (Ubuntu/Debian)</div>
+            <div class="pb-body">
+              1) Install VS Code from Microsoft repo:<br/>
+              <code>sudo apt update && sudo apt install wget gpg apt-transport-https</code><br/>
+              <code>wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor &gt; packages.microsoft.gpg</code><br/>
+              <code>sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg</code><br/>
+              <code>echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" | sudo tee /etc/apt/sources.list.d/vscode.list &gt; /dev/null</code><br/>
+              <code>sudo apt update && sudo apt install code</code><br/>
+              2) Install Python 3.13 and venv tools:<br/>
+              <code>sudo apt install python3.13 python3.13-venv python3-pip</code><br/>
+              If <code>python3.13</code> is unavailable on your distro, use one fallback path:<br/>
+              A) uv-managed Python:<br/>
+              <code>uv python install 3.13</code><br/>
+              B) pyenv-based install:<br/>
+              <code>curl https://pyenv.run | bash</code><br/>
+              <code>pyenv install 3.13.2 &amp;&amp; pyenv global 3.13.2</code><br/>
+              3) Install uv:<br/>
+              <code>curl -LsSf https://astral.sh/uv/install.sh | sh</code><br/>
+              4) Restart shell and verify:<br/>
+              <code>python3.13 --version</code> · <code>uv --version</code> · <code>code --version</code>
+            </div>
+          </div>
+
+          <div class="project-box">
+            <div class="pb-title" id="navigate">Terminal navigation basics (all OS)</div>
+            <div class="pb-body">
+              Use these commands every day to move inside project folders:<br/>
+              <code>pwd</code> (show current folder), <code>ls</code> (list files), <code>cd folder-name</code> (go into folder), <code>cd ..</code> (go up one level), <code>mkdir project-name</code> (create folder).<br/>
+              Windows PowerShell equivalents are the same for <code>cd</code>, <code>ls</code>, and <code>mkdir</code>.<br/>
+              Open current folder in VS Code with <code>code .</code>.
+            </div>
+          </div>
+
+          <div class="project-box"><div class="pb-title">Outcome</div><div class="pb-body">A fully verified local Python toolchain across macOS, Windows, or Linux, ready for the bridge course and AI engineering route.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="extensions">
+        <div class="module-head" style="--mc:#3B82F6">
+          <div class="mh-left">
+            <span class="mh-num">02</span>
+            <div>
+              <h2>Install the modern extension set</h2>
+              <span class="mh-meta">Python, Pylance, debugpy, Ruff, Jupyter, and GitHub tooling</span>
+            </div>
+          </div>
+          <span class="mh-badge" style="--mc:#3B82F6">Extensions</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Core language support: <code>ms-python.python</code>, <code>ms-python.vscode-pylance</code>, and <code>ms-python.debugpy</code>.</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Use Ruff for linting and formatting instead of deprecated <code>python.linting.*</code> settings.</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Add <code>ms-python.black-formatter</code> or <code>charliermarsh.ruff</code> depending on the project style.</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Install Jupyter extensions for notebooks and cell-based exploration.</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Add GitHub Pull Requests, Copilot, GitLens, and remote development packs as needed.</span></div>
+          </div>
+          <div class="project-box"><div class="pb-title">Rule of thumb</div><div class="pb-body">Install only the tools you actually use, and let the extension architecture stay modular.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="env">
+        <div class="module-head" style="--mc:#10B981">
+          <div class="mh-left">
+            <span class="mh-num">03</span>
+            <div>
+              <h2>Create your first project and environment step-by-step</h2>
+              <span class="mh-meta">From empty folder to running Python app in VS Code</span>
+            </div>
+          </div>
+          <span class="mh-badge" style="--mc:#10B981">Environments</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Create and open a folder: <code>mkdir python-course-lab &amp;&amp; cd python-course-lab</code>, then <code>code .</code>.</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Open VS Code terminal and create environment with <code>uv venv .venv</code>.</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Activate environment:<br/>macOS/Linux: <code>source .venv/bin/activate</code><br/>Windows PowerShell: <code>.venv\Scripts\Activate.ps1</code></span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Install starter tools: <code>uv pip install ruff pytest</code> then create <code>main.py</code>.</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Run <code>Python: Select Interpreter</code> and pick the interpreter inside <code>.venv</code> for this workspace.</span></div>
+          </div>
+          <div class="code-block">
+            <div class="cb-header"><span class="cb-dot r"></span><span class="cb-dot y"></span><span class="cb-dot g"></span><span class="cb-file">first-run-checks.sh</span></div>
+            <pre><code># 1) show python path (must point to .venv)
+which python
+
+# 2) verify package install works
+python -m pip --version
+
+# 3) create and run a sample file
+printf 'print("Python setup OK")\n' > main.py
+python main.py
+
+# 4) verify lint tool is available
+ruff --version</code></pre>
+          </div>
+          <div class="code-block">
+            <div class="cb-header"><span class="cb-dot r"></span><span class="cb-dot y"></span><span class="cb-dot g"></span><span class="cb-file">first-run-checks.ps1</span></div>
+            <pre><code># 1) show python path (must point to .venv\Scripts\python.exe)
+Get-Command python
+
+# 2) verify package install works
+python -m pip --version
+
+# 3) create and run a sample file
+Set-Content -Path main.py -Value 'print("Python setup OK")'
+python main.py
+
+# 4) verify lint tool is available
+ruff --version</code></pre>
+          </div>
+          <div class="project-box"><div class="pb-title">Workspace trust</div><div class="pb-body">Keep trusted projects enabled so extensions, debugging, and linting activate as expected. If prompts appear, choose trust for your own course folders.</div></div>
+        </div>
+      </div>
+
+      <div class="module" id="trust">
+        <div class="module-head" style="--mc:#10B981">
+          <div class="mh-left">
+            <span class="mh-num">04</span>
+            <div>
+              <h2>Workspace trust and security defaults</h2>
+              <span class="mh-meta">Protect untrusted folders and keep file execution visible</span>
+            </div>
+          </div>
+          <span class="mh-badge" style="--mc:#10B981">Security</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Trusted workspaces allow extensions that run code, lint, format, and debug.</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Use <code>security.workspace.trust.untrustedFiles</code> set to <code>prompt</code> in user settings.</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Be cautious with downloaded code and only trust sources you control.</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Keep secrets out of source control and use environment files for local values.</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Use repository-specific settings so the course setup stays reproducible across machines.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="module" id="editor">
+        <div class="module-head" style="--mc:#F59E0B">
+          <div class="mh-left">
+            <span class="mh-num">05</span>
+            <div>
+              <h2>Editor settings and IntelliSense</h2>
+              <span class="mh-meta">The daily editing experience in VS Code</span>
+            </div>
+          </div>
+          <span class="mh-badge" style="--mc:#F59E0B">Editor</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Enable font, tab, wrap, and ruler defaults that fit Python code well.</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Turn on Pylance type checking and auto-import completions.</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Use inlay hints, sticky scroll, and bracket pair colorization for readability.</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Keep save-time actions focused: format, organize imports, and fix issues explicitly.</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Use the command palette for interpreter selection, sorting imports, and opening settings.</span></div>
+          </div>
+          <div class="code-block">
+            <div class="cb-header"><span class="cb-dot r"></span><span class="cb-dot y"></span><span class="cb-dot g"></span><span class="cb-file">settings.json</span></div>
+            <pre><code>{
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+  "python.terminal.activateEnvironment": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+  "editor.stickyScroll.enabled": true,
+  "editor.inlayHints.enabled": "on"
+}</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="module" id="lint">
+        <div class="module-head" style="--mc:#F59E0B">
+          <div class="mh-left">
+            <span class="mh-num">06</span>
+            <div>
+              <h2>Linting and formatting</h2>
+              <span class="mh-meta">Ruff, Black, mypy, and flake8 as standalone tools</span>
+            </div>
+          </div>
+          <span class="mh-badge" style="--mc:#F59E0B">Quality</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Use Ruff for modern linting and formatting with a single config in <code>pyproject.toml</code>.</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Keep <code>python.linting.*</code> settings out of the project because they are deprecated.</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Install standalone tools like pylint, mypy, and flake8 only when the project needs them.</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Put formatter choice in the Python language block for consistent save behavior.</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Let the toolchain own import sorting, code actions, and line-length conventions.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="module" id="debug">
+        <div class="module-head" style="--mc:#EF4444">
+          <div class="mh-left">
+            <span class="mh-num">07</span>
+            <div>
+              <h2>Debugging with debugpy</h2>
+              <span class="mh-meta">Launch configs, breakpoints, and zero-config run</span>
+            </div>
+          </div>
+          <span class="mh-badge" style="--mc:#EF4444">Debugger</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Use <code>F5</code> to start debugging and <code>Ctrl+F5</code> to run without debugging.</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Use <code>debugpy</code> in <code>launch.json</code> for modern Python debug configurations.</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Create launch entries for files, modules, web apps, pytest, and attach sessions.</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Use conditional breakpoints, logpoints, and hit counts when plain breakpoints are not enough.</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Use the call stack, watch expressions, and debug console to inspect runtime state.</span></div>
+          </div>
+          <div class="code-block">
+            <div class="cb-header"><span class="cb-dot r"></span><span class="cb-dot y"></span><span class="cb-dot g"></span><span class="cb-file">launch.json</span></div>
+            <pre><code>{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Current File",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal"
+    }
+  ]
+}</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="module" id="test">
+        <div class="module-head" style="--mc:#EF4444">
+          <div class="mh-left">
+            <span class="mh-num">08</span>
+            <div>
+              <h2>Testing with pytest and unittest</h2>
+              <span class="mh-meta">Discover, run, and debug tests from the editor</span>
+            </div>
+          </div>
+          <span class="mh-badge" style="--mc:#EF4444">Testing</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Enable pytest discovery from workspace settings and keep tests under a clear folder.</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Use fixtures, parametrization, and short test names for readable test suites.</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Use the Testing panel for run, debug, and coverage-aware workflows.</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Keep <code>unittest</code> available for projects that depend on it or need <code>mock.patch</code>.</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Keep test config in <code>pyproject.toml</code> so discovery and coverage rules stay in sync.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="module" id="git">
+        <div class="module-head" style="--mc:#3B82F6">
+          <div class="mh-left">
+            <span class="mh-num">09</span>
+            <div>
+              <h2>Git, GitHub, Jupyter, tasks, snippets, profiles, and structure</h2>
+              <span class="mh-meta">Everything around the editor that keeps the course workflow clean</span>
+            </div>
+          </div>
+          <span class="mh-badge" style="--mc:#3B82F6">Workflow</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Use GitHub Pull Requests, Copilot, and GitLens to keep review flows inside VS Code.</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>On Windows, prefer WSL for Linux-first workflows. Install from Microsoft Store, then run VS Code with the WSL extension for near-identical Linux dev behavior.</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Create tasks for tests, linting, formatting, and dependency installs to reduce command drift.</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Build snippets for main guards, dataclasses, class skeletons, and test templates.</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Use VS Code profiles for separate course, data science, or web development environments.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="module" id="structure">
+        <div class="module-head" style="--mc:#10B981">
+          <div class="mh-left">
+            <span class="mh-num">10</span>
+            <div>
+              <h2>Recommended project structure and checklist</h2>
+              <span class="mh-meta">Use one consistent layout for every course project</span>
+            </div>
+          </div>
+          <span class="mh-badge" style="--mc:#10B981">Reference</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>Keep source code under <code>src/</code> and tests under <code>tests/</code>.</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span>Keep <code>pyproject.toml</code> as the single source of truth for tool config.</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Add <code>.gitignore</code> entries for <code>.venv/</code>, <code>.env</code>, caches, and build output.</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Use <code>.vscode/settings.json</code>, <code>launch.json</code>, and <code>tasks.json</code> for workspace behavior.</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>Verify the setup by opening a Python file, formatting, running tests, and starting the debugger.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="module" id="troubleshoot">
+        <div class="module-head" style="--mc:#EF4444">
+          <div class="mh-left">
+            <span class="mh-num">11</span>
+            <div>
+              <h2>Common setup errors and quick fixes</h2>
+              <span class="mh-meta">Use this when setup commands fail or VS Code behaves unexpectedly</span>
+            </div>
+          </div>
+          <span class="mh-badge" style="--mc:#EF4444">Troubleshooting</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span><strong>code command not found:</strong> on macOS run <code>Shell Command: Install 'code' command in PATH</code>; restart terminal.</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span><strong>Wrong Python used:</strong> run <code>Python: Select Interpreter</code> and pick the one inside <code>.venv</code>.</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span><strong>.venv does not activate on PowerShell:</strong> use <code>.venv\Scripts\Activate.ps1</code>; if blocked, set execution policy for current user.</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span><strong>Pylance or linting not active:</strong> confirm workspace is trusted and extensions are enabled in this workspace.</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span><strong>Linux package not found for python3.13:</strong> use <code>uv python install 3.13</code> or pyenv fallback path.</span></div>
+            <div class="topic-item"><span class="ti-n">06</span><span><strong>PATH mismatch:</strong> restart terminal and run <code>which python</code> (or <code>Get-Command python</code> on Windows).</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="module" id="instructor-checklist">
+        <div class="module-head" style="--mc:#14B8A6">
+          <div class="mh-left">
+            <span class="mh-num">12</span>
+            <div>
+              <h2>Instructor two-minute machine audit</h2>
+              <span class="mh-meta">Fast checklist for professors, TAs, and mentors before class starts</span>
+            </div>
+          </div>
+          <span class="mh-badge" style="--mc:#14B8A6">Teaching ops</span>
+        </div>
+        <div class="module-body">
+          <div class="topic-list">
+            <div class="topic-item"><span class="ti-n">01</span><span>VS Code opens with <code>code .</code> from terminal successfully.</span></div>
+            <div class="topic-item"><span class="ti-n">02</span><span><code>python --version</code> (or <code>python3 --version</code>) and <code>uv --version</code> both return valid versions.</span></div>
+            <div class="topic-item"><span class="ti-n">03</span><span>Student created and activated <code>.venv</code>; interpreter status bar points to project <code>.venv</code>.</span></div>
+            <div class="topic-item"><span class="ti-n">04</span><span>Extensions installed and active: Python, Pylance, Debugger, and Ruff/Black as chosen.</span></div>
+            <div class="topic-item"><span class="ti-n">05</span><span>A sample file runs, a breakpoint hits with <code>F5</code>, and pytest discovers at least one test.</span></div>
+            <div class="topic-item"><span class="ti-n">06</span><span>Workspace is trusted and no critical warnings remain in the Problems panel.</span></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <section class="curr-cta">
+    <div class="container">
+      <div class="cta-block">
+        <div class="cta-left">
+          <div class="cta-live"><span class="live-dot"></span>Setup guide for the course workspace</div>
+          <h2 class="cta-title">Set up the course environment once, then reuse it everywhere.</h2>
+          <p class="cta-sub">The same editor rules support the bridge course, the AI engineering route, and any project built afterward.</p>
+        </div>
+        <div class="cta-contacts">
+          <a href="../ai-engineering/" class="btn btn-outline">AI engineering route</a>
+          <a href="../curriculum.html" class="btn btn-primary">Python bridge course</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="../main.js"></script>
+</body>
+</html>
